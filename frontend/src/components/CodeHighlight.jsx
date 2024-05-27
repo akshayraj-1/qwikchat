@@ -2,6 +2,7 @@ import { v4 as uuidv4 } from 'uuid';
 import SyntaxHighlighter from "react-syntax-highlighter";
 
 import cn from "../utils/cn.util.js";
+import {detectLanguage} from "../utils/text.util.js";
 import CustomSyntaxStyle from "../values/custom-syntax-style.json";
 
 function CodeHighlight({message}) {
@@ -13,7 +14,7 @@ function CodeHighlight({message}) {
         if (index % 2 === 1) {
             return (
                 <SyntaxHighlighter key={uuidv4()}
-                                   language="javascript"
+                                   language={detectLanguage(part)}
                                    style={CustomSyntaxStyle}
                                    wrapLongLines={true}
                                    title={"Click to copy the code"}
