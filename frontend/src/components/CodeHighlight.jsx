@@ -18,7 +18,7 @@ function CodeHighlight({message}) {
                                    style={CustomSyntaxStyle}
                                    wrapLongLines={true}
                                    title={"Click to copy the code"}
-                                   className={cn(hasOnlyCode ? "rounded-md" : "rounded-md my-2", "cursor-pointer")}
+                                   className={cn(hasOnlyCode ? "rounded-md" : "rounded-md my-2", "cursor-pointer break-words")}
                                    onClick={() => {
                                        navigator.clipboard.writeText(part.trim()).then(r => {
                                            window.alert("Copied to clipboard");
