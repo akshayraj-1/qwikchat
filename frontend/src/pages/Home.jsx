@@ -55,7 +55,7 @@ function Home() {
                                     variants={variants} initial="initial" animate="final" >
                             <h1 className="overflow-hidden">
                                 {
-                                    Array.from(["Connect.", "Chat.", "Disconnect"]).map((label, idx) => {
+                                    Array.from(["Connect.", "Chat.", "Disconnect."]).map((label, idx) => {
                                         return <motion.span key={idx} variants={variants}
                                                             className="inline-block">{label}</motion.span>
                                     })
