@@ -1,0 +1,13 @@
+{
+  "maxBufferSize": 1e8,
+  "maxRoomSize": 3,
+  "events": {
+    "CONNECT": "connect",
+    "ON_CONNECT": "connection",
+    "ON_DISCONNECT": "disconnect",
+    "RECONNECT": "reconnect",
+    "JOIN_ROOM": "join-room",
+    "SEND_MESSAGE": "send-message",
+    "BROADCAST_MESSAGE": "broadcast-message"
+  }
+}

@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*::-webkit-scrollbar {
+    @apply w-0;
+}
+
+body, html {
+    @apply
+    h-full w-full
+    overflow-x-hidden 
+    font-firacode
+    text-white 
+    bg-primary 
+    scroll-smooth
+    antialiased;
+}
+
+p, span, h1, h2, h3, h4, h5, h6 {
+    @apply
+    pointer-events-none;
+}
+
+#root {
+    @apply h-full w-full;
+}
