@@ -33,14 +33,15 @@ const ChatBubble = React.memo(({user, messageModel, handleImageClick}) => {
                 {
                     messageModel.type === SocketMessageConfig.type.TEXT
                         ? emoteIcon
-                            ? <img className="size-32 select-none" src={emoteIcon.url} alt={emoteIcon.description}/>
+                            ? <img className="size-32 select-none" src={emoteIcon.url} alt={emoteIcon.description} onContextMenu={(e) => e.preventDefault()}/>
                             : <div className={cn("rounded-l-xl rounded-br-xl", styles.textMessage)}>
                                 <CodeHighlight message={messageModel.content}/>
                             </div>
                         : <img className={cn(styles.textMessage, styles.imageMessage)}
                                src={URL.createObjectURL(new Blob([messageModel.content]))}
                                alt="image"
-                               onClick={handleImageClick}/>
+                               onClick={handleImageClick}
+                               onContextMenu={(e) => e.preventDefault()}/>
                 }
             </div>
         )
@@ -49,20 +50,21 @@ const ChatBubble = React.memo(({user, messageModel, handleImageClick}) => {
     const ReceiverMessage = () => {
         return (
             <div className={"flex gap-2 items-start w-auto md:max-w-[80%] my-3 me-16 self-start"}>
-                <img className={"rounded-full size-8 object-cover"} src={messageModel.senderAvatar} alt="user avatar"/>
+                <img className={"rounded-full size-8 object-cover"} src={messageModel.senderAvatar} alt="user avatar" onContextMenu={(e) => e.preventDefault()}/>
                 <div className={"flex flex-col gap-1.5"}>
                     <span className={"text-xs text-textSecondary select-none"}>{messageModel.senderName}</span>
                     {
                         messageModel.type === SocketMessageConfig.type.TEXT
                             ? emoteIcon
-                                ? <img className="size-32 select-none" src={emoteIcon.url} alt={emoteIcon.description}/>
+                                ? <img className="size-32 select-none" src={emoteIcon.url} alt={emoteIcon.description} onContextMenu={(e) => e.preventDefault()}/>
                                 : <div className={cn("rounded-r-xl rounded-bl-xl", styles.textMessage)}>
                                     <CodeHighlight message={messageModel.content}/>
                                 </div>
                             : <img className={cn(styles.textMessage, styles.imageMessage)}
                                    src={URL.createObjectURL(new Blob([messageModel.content]))}
                                    alt="image"
-                                   onClick={handleImageClick}/>
+                                   onClick={handleImageClick}
+                                   onContextMenu={(e) => e.preventDefault()}/>
                     }
                 </div>
             </div>

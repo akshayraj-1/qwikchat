@@ -74,7 +74,8 @@ function Join({socket, roomId}) {
                     <motion.img className="absolute z-[2] -top-14 size-32 p-3" initial={{opacity: 0}}
                                 animate={avatarLoaded && {opacity: 1, transition: {duration: 0.5, ease: "easeIn"}}}
                                 src={user.avatar} alt="User Avatar"
-                                onLoad={() => setAvatarLoaded(true)}/>
+                                onLoad={() => setAvatarLoaded(true)}
+                                onContextMenu={(e) => e.preventDefault()}/>
 
                     <label htmlFor="roomId" className="text-textSecondary text-start w-full inline-block mt-14">Room Id</label>
                     <input id="roomId"
