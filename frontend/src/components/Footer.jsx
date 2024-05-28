@@ -1,4 +1,5 @@
 import {Link} from "react-router-dom";
+import {version} from "../../package.json";
 
 function Footer() {
     return (
@@ -6,7 +7,7 @@ function Footer() {
             <Link className="hover:text-white" to="/about">About</Link>
             <Link className="hover:text-white" to="/help">Help</Link>
             <Link className="hover:text-white" to="/privacy">Privacy</Link>
-            <span className="ms-auto opacity-30" >v2.2.0</span>
+            <span className="ms-auto opacity-30" >{version}</span>
         </footer>
     )
 }

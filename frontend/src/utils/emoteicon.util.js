@@ -1,16 +1,4 @@
 const emojiMap = new Map([
-    ["👾", {
-        description: "Alien Monster",
-        url: "https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Alien%20Monster.png"
-    }],
-    ["👽", {
-        description: "Alien",
-        url: "https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Alien.png"
-    }],
-    ["👿", {
-        description: "Angry Face with Horns",
-        url: "https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Angry%20Face%20with%20Horns.png"
-    }],
     ["😧", {
         description: "Anguished Face",
         url: "https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Anguished%20Face.png"
@@ -35,10 +23,6 @@ const emojiMap = new Map([
         description: "Biting Lip",
         url: "https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Biting%20Lip.png"
     }],
-    ["💣", {
-        description: "Bomb",
-        url: "https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Bomb.png"
-    }],
     ["💔", {
         description: "Broken Heart",
         url: "https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Broken%20Heart.png"
@@ -46,10 +30,6 @@ const emojiMap = new Map([
     ["🥶", {
         description: "Cold Face",
         url: "https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Cold%20Face.png"
-    }],
-    ["💥", {
-        description: "Collision",
-        url: "https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Collision.png"
     }],
     ["😖", {
         description: "Confounded Face",
@@ -115,10 +95,6 @@ const emojiMap = new Map([
         description: "Fearful Face",
         url: "https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Fearful%20Face.png"
     }],
-    ["👻", {
-        description: "Ghost",
-        url: "https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Ghost.png"
-    }],
     ["😬", {
         description: "Grimacing Face",
         url: "https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Grimacing%20Face.png"
@@ -126,10 +102,6 @@ const emojiMap = new Map([
     ["🤗", {
         description: "Hugging Face",
         url: "https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Hugging%20Face.png"
-    }],
-    ["💯", {
-        description: "Hundred Points",
-        url: "https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Hundred%20Points.png"
     }],
     ["💋", {
         description: "Kiss Mark",
@@ -199,30 +171,6 @@ const emojiMap = new Map([
         description: "Crossed Fingers",
         url: "https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Hand%20gestures/Crossed%20Fingers.png"
     }],
-    ["🤙🏻", {
-        description: "Call Me Hand Light Skin Tone",
-        url: "https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Hand%20gestures/Call%20Me%20Hand%20Light%20Skin%20Tone.png"
-    }],
-    ["☝️", {
-        description: "Backhand Index Pointing Up",
-        url: "https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Hand%20gestures/Backhand%20Index%20Pointing%20Up.png"
-    }],
-    ["👈", {
-        description: "Backhand Index Pointing Left",
-        url: "https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Hand%20gestures/Backhand%20Index%20Pointing%20Left.png"
-    }],
-    ["👇", {
-        description: "Backhand Index Pointing Down",
-        url: "https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Hand%20gestures/Backhand%20Index%20Pointing%20Down.png"
-    }],
-    ["💪", {
-        description: "Flexed Biceps",
-        url: "https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Hand%20gestures/Flexed%20Biceps.png"
-    }],
-    ["🤛", {
-        description: "Left-Facing Fist",
-        url: "https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Hand%20gestures/Left-Facing%20Fist.png"
-    }],
     ["👊", {
         description: "Oncoming Fist",
         url: "https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Hand%20gestures/Oncoming%20Fist.png"
@@ -255,30 +203,6 @@ const emojiMap = new Map([
         description: "Waving Hand",
         url: "https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Hand%20gestures/Waving%20Hand.png"
     }],
-    ['🐻', {
-        description: 'Bear',
-        url: 'https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Animals/Bear.png'
-    }],
-    ['🌸', {
-        description: 'Blossom',
-        url: 'https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Animals/Blossom.png'
-    }],
-    ['🐔', {
-        description: 'Chicken',
-        url: 'https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Animals/Chicken.png'
-    }],
-    ['🦊', {
-        description: 'Fox',
-        url: 'https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Animals/Fox.png'
-    }],
-    ['🐞', {
-        description: 'Lady Beetle',
-        url: 'https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Animals/Lady%20Beetle.png'
-    }],
-    ['🐺', {
-        description: 'Wolf',
-        url: 'https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Animals/Wolf.png'
-    }],
     ['🤬', {
         description: 'Face with Symbols on Mouth',
         url: 'https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Face%20with%20Symbols%20on%20Mouth.png'
@@ -298,10 +222,6 @@ const emojiMap = new Map([
     ['🤑', {
         description: 'Money-Mouth Face',
         url: 'https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Money-Mouth%20Face.png'
-    }],
-    ['💀', {
-        description: 'Skull',
-        url: 'https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Skull.png'
     }],
     ['🤧', {
         description: 'Sneezing Face',
@@ -355,49 +275,13 @@ const emojiMap = new Map([
         description: "Worried Face",
         url: "https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Worried%20Face.png"
     }],
-    ["🖤", {
-        description: "Black Heart",
-        url: "https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Black%20Heart.png"
-    }],
-    ["💙", {
-        description: "Blue Heart",
-        url: "https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Blue%20Heart.png"
-    }],
-    ["🤎", {
-        description: "Brown Heart",
-        url: "https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Brown%20Heart.png"
-    }],
-    ["😼", {
-        description: "Cat with Wry Smile",
-        url: "https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Cat%20with%20Wry%20Smile.png"
-    }],
-    ["😹", {
-        description: "Cat with Tears of Joy",
-        url: "https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Cat%20with%20Tears%20of%20Joy.png"
-    }],
-    ["🤡", {
-        description: "Clown Face",
-        url: "https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Clown%20Face.png"
-    }],
     ["🤠", {
         description: "Cowboy Hat Face",
         url: "https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Cowboy%20Hat%20Face.png"
     }],
-    ["😿", {
-        description: "Crying Cat",
-        url: "https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Crying%20Cat.png"
-    }],
-    ["🏃‍♂️", {
-        description: "Dashing Away",
-        url: "https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Dashing%20Away.png"
-    }],
     ["🥸", {
         description: "Disguised Face",
         url: "https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Disguised%20Face.png"
-    }],
-    ["💫", {
-        description: "Dizzy",
-        url: "https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Dizzy.png"
     }],
     ["🫥", {
         description: "Dotted Line Face",
@@ -414,10 +298,6 @@ const emojiMap = new Map([
     ["😑", {
         description: "Expressionless Face",
         url: "https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Expressionless%20Face.png"
-    }],
-    ["👁️‍🗨️", {
-        description: "Eye in Speech Bubble",
-        url: "https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Eye%20in%20Speech%20Bubble.png"
     }],
     ["😚", {
         description: "Face Blowing a Kiss",
@@ -479,14 +359,6 @@ const emojiMap = new Map([
         description: "Growing Heart",
         url: "https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Growing%20Heart.png"
     }],
-    ["🙉", {
-        description: "Hear-No-Evil Monkey",
-        url: "https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Hear-No-Evil%20Monkey.png"
-    }],
-    ["💟", {
-        description: "Heart Decoration",
-        url: "https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Heart%20Decoration.png"
-    }],
     ["❣️", {
         description: "Heart Exclamation",
         url: "https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Heart%20Exclamation.png"
@@ -503,14 +375,6 @@ const emojiMap = new Map([
         description: "Hot Face",
         url: "https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Hot%20Face.png"
     }],
-    ["😽", {
-        description: "Kissing Cat",
-        url: "https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Kissing%20Cat.png"
-    }],
-    ["💌", {
-        description: "Love Letter",
-        url: "https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Love%20Letter.png"
-    }],
     ["❤️‍🩹", {
         description: "Mending Heart",
         url: "https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Mending%20Heart.png"
@@ -518,14 +382,6 @@ const emojiMap = new Map([
     ["💓", {
         description: "Pink Heart",
         url: "https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Pink%20Heart.png"
-    }],
-    ["💜", {
-        description: "Purple Heart",
-        url: "https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Purple%20Heart.png"
-    }],
-    ["🙈", {
-        description: "See-No-Evil Monkey",
-        url: "https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/See-No-Evil%20Monkey.png"
     }],
     ["😈", {
         description: "Smiling Face with Horns",
@@ -543,137 +399,25 @@ const emojiMap = new Map([
         description: "Upside-Down Face",
         url: "https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Upside-Down%20Face.png"
     }],
-    ["💛", {
-        description: "Yellow Heart",
-        url: "https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Yellow%20Heart.png"
-    }],
-    ["🥇", {
-        description: "1st Place Medal",
-        url: "https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Activities/1st%20Place%20Medal.png"
-    }],
-    ["🥈", {
-        description: "2nd Place Medal",
-        url: "https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Activities/2nd%20Place%20Medal.png"
-    }],
-    ["🥉", {
-        description: "3rd Place Medal",
-        url: "https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Activities/3rd%20Place%20Medal.png"
-    }],
-    ["🎟️", {
-        description: "Admission Tickets",
-        url: "https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Activities/Admission%20Tickets.png"
-    }],
-    ["🏀", {
-        description: "Basketball",
-        url: "https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Activities/Basketball.png"
-    }],
-    ["⚾", {
-        description: "Baseball",
-        url: "https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Activities/Baseball.png"
-    }],
-    ["🏸", {
-        description: "Badminton",
-        url: "https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Activities/Badminton.png"
-    }],
-    ["🎈", {
-        description: "Balloon",
-        url: "https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Activities/Balloon.png"
-    }],
-    ["🥊", {
-        description: "Boxing Glove",
-        url: "https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Activities/Boxing%20Glove.png"
-    }],
     ["🎊", {
         description: "Confetti Ball",
         url: "https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Activities/Confetti%20Ball.png"
-    }],
-    ["🏏", {
-        description: "Cricket Game",
-        url: "https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Activities/Cricket%20Game.png"
-    }],
-    ["🤿", {
-        description: "Diving Mask",
-        url: "https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Activities/Diving%20Mask.png"
-    }],
-    ["🎆", {
-        description: "Fireworks",
-        url: "https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Activities/Fireworks.png"
-    }],
-    ["🧨", {
-        description: "Firecracker",
-        url: "https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Activities/Firecracker.png"
     }],
     ["♥️", {
         description: "Heart Suit",
         url: "https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Activities/Heart%20Suit.png"
     }],
-    ["🎃", {
-        description: "Jack-O-Lantern",
-        url: "https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Activities/Jack-O-Lantern.png"
-    }],
-    ["🎖️", {
-        description: "Military Medal",
-        url: "https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Activities/Military%20Medal.png"
-    }],
     ["🎉", {
         description: "Party Popper",
         url: "https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Activities/Party%20Popper.png"
-    }],
-    ["🎇", {
-        description: "Sparkler",
-        url: "https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Activities/Sparkler.png"
     }],
     ["✨", {
         description: "Sparkles",
         url: "https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Activities/Sparkles.png"
     }],
-    ["🎁", {
-        description: "Wrapped Gift",
-        url: "https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Activities/Wrapped%20Gift.png"
-    }],
-    ["⏰", {
-        description: "Alarm Clock",
-        url: "https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/Alarm%20Clock.png"
-    }],
-    ["⛈️", {
-        description: "Cloud with Lightning and Rain",
-        url: "https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/Cloud%20with%20Lightning%20and%20Rain.png"
-    }],
-    ["🌧️", {
-        description: "Cloud with Rain",
-        url: "https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/Cloud%20with%20Rain.png"
-    }],
-    ["🌨️", {
-        description: "Cloud with Snow",
-        url: "https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/Cloud%20with%20Snow.png"
-    }],
-    ["☁️", {
-        description: "Cloud",
-        url: "https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/Cloud.png"
-    }],
-    ["🌙", {
-        description: "Crescent Moon",
-        url: "https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/Crescent%20Moon.png"
-    }],
-    ["☄️", {
-        description: "Comet",
-        url: "https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/Comet.png"
-    }],
-    ["🧭", {
-        description: "Compass",
-        url: "https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/Compass.png"
-    }],
-    ["🚧", {
-        description: "Construction",
-        url: "https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/Construction.png"
-    }],
     ["🔥", {
         description: "Fire",
         url: "https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/Fire.png"
-    }],
-    ["🌝", {
-        description: "Full Moon Face",
-        url: "https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/Full%20Moon%20Face.png"
     }],
     ["🌟", {
         description: "Glowing Star",
@@ -686,37 +430,8 @@ const emojiMap = new Map([
     ["⭐", {
         description: "Star",
         url: "https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/Star.png"
-    }],
-    ["☃️", {
-        description: "Snowman",
-        url: "https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/Snowman.png"
-    }],
-    ["⛇", {
-        description: "Snowman Without Snow",
-        url: "https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/Snowman%20Without%20Snow.png"
-    }],
-    ["🌞", {
-        description: "Sun with Face",
-        url: "https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/Sun%20with%20Face.png"
-    }],
-    ["🪵", {
-        description: "Wood",
-        url: "https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/Wood.png"
-    }],
-    ["👙", {
-        description: "Bikini",
-        url: "https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Bikini.png"
-    }],
-    ["🩱", {
-        description: "One-Piece Swimsuit",
-        url: "https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/One-Piece%20Swimsuit.png"
-    }],
-    ["🪗", {
-        description: "Accordion",
-        url: "https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Accordion.png"
     }]
 ]);
-
 
 function getEmoteIcon(emote) {
     return emojiMap.get(emote);

@@ -47,7 +47,7 @@ function Home() {
     return (
         <section className="relative h-full w-full">
             <motion.div variants={variants.mainDiv} initial="initial" animate="final" className="relative h-full w-full">
-                <InfiniteGrids opacity={0.7} className="h-full w-full">
+                <InfiniteGrids className="h-full w-full">
                     <MeshGradient className="flex flex-col justify-center items-center h-full w-full px-5 sm:px-9">
 
                         <motion.div className="font-semibold"
