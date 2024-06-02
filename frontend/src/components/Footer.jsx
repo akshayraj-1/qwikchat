@@ -7,7 +7,7 @@ function Footer() {
             <Link className="hover:text-white" to="/about">About</Link>
             <Link className="hover:text-white" to="/help">Help</Link>
             <Link className="hover:text-white" to="/privacy">Privacy</Link>
-            <span className="ms-auto opacity-30" >{version}</span>
+            <span className="ms-auto opacity-40" >{version}</span>
         </footer>
     )
 }

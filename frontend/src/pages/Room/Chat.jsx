@@ -113,7 +113,7 @@ function Chat({socket}) {
                             sendTextMessage();
                         }}
                         onMouseDown={(e) => e.preventDefault()}>
-                        <ArrowUpFromDot size="17"/>
+                        <ArrowUpFromDot size="17" className="rotate-45"/>
                     </div>
                 </div>
             </div>
