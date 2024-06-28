@@ -63,7 +63,7 @@ function Join({socket, roomId}) {
 
                 {/*background*/}
                 <motion.div initial={{opacity: 0}}
-                            animate={{opacity: 0.4, transition: {duration: 0.5, ease: "easeIn"}}}
+                            animate={{opacity: 0.5, transition: {duration: 0.5, ease: "easeIn"}}}
                             className="absolute h-full w-full bg-layerBlur1 bg-no-repeat bg-cover bg-center blur-xl"/>
 
                 {/*input box*/}
@@ -95,6 +95,7 @@ function Join({socket, roomId}) {
 
                     <Button className="w-full my-3.5 py-2"
                             label="Enter"
+                            effect={{click: {scale: 0.95}}}
                             onClick={onBtnJoinRoomClick}/>
 
                 </motion.div>

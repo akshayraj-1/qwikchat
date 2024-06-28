@@ -36,7 +36,10 @@ function Chat({socket}) {
 
     useEffect(() => {
         const handleVisibilityChange = () => {
-            document.visibilityState === "visible" && (document.title = "Byte Threads");
+            if (document.visibilityState === "visible") {
+                document.title = "Byte Threads";
+                setNewMessageCount(0);
+            }
         }
         document.addEventListener("visibilitychange", handleVisibilityChange);
         return () => {
