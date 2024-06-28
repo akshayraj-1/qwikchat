@@ -13,6 +13,7 @@ function useChatRoomSocket() {
 
     useEffect(() => {
 
+        // Handle Connect
         socket.on(SocketConfig.events.CONNECT, () => {
             console.log("Connected");
         });
@@ -76,10 +77,6 @@ function useChatRoomSocket() {
     const sendMessage = (message, isText) => {
         if (message === '' || !data.user.connected) return;
 
-        if (message.content === "dis") {
-            socket.disconnect();
-            return;
-        }
         // Handle Send Message
         socket.emit(SocketConfig.events.SEND_MESSAGE, data.room.id, new MessageModel({
             senderId: data.user.id,
@@ -90,6 +87,7 @@ function useChatRoomSocket() {
         }));
     }
 
+    // Update Data
     const updateData = ({room = null, user = null, messages = null}) => {
         setData(prevState => ({
             ...prevState,
@@ -108,6 +106,7 @@ function useChatRoomSocket() {
         }));
     };
 
+    // Get Random Avatar
     const getRandomAvatar = () => {
         return "https://firebasestorage.googleapis.com/v0/b/bytethreads.appspot.com/o/avatars%2Favatar%20(" + (Math.random() * 38 + 1).toFixed(0) + ").png?alt=media"
     }
