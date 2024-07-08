@@ -71,6 +71,9 @@ function Join({socket, roomId}) {
                             className="relative flex flex-col items-center justify-center shadow-2xl px-7 py-5 min-w-80 bg-secondary border border-secondaryLight rounded-2xl text-sm
                             before:content-[''] before:absolute before:-top-14 before:size-32 before:bg-secondary before:border-t before:border-r before:-rotate-45 before:border-secondaryLight before:rounded-full">
 
+                    {
+                        !avatarLoaded && <div className="absolute z-[2] -top-[2.8rem] size-[6.8rem] p-3 bg-secondaryLight/20 rounded-full animate-pulse" ></div>
+                    }
                     <motion.img className="absolute z-[2] -top-14 size-32 p-3" initial={{opacity: 0}}
                                 animate={avatarLoaded && {opacity: 1, transition: {duration: 0.5, ease: "easeIn"}}}
                                 src={user.avatar} alt="User Avatar"
