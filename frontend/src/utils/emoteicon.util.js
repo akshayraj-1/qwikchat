@@ -430,6 +430,10 @@ const emojiMap = new Map([
     ["⭐", {
         description: "Star",
         url: "https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/Star.png"
+    }],
+    ["💦", {
+        description: "Sweat Droplets",
+        url: "https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Sweat%20Droplets.png"
     }]
 ]);
 
