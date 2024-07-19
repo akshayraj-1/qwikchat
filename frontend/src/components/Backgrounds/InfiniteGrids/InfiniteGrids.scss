@@ -1,4 +1,4 @@
-$bg-url: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAACPSURBVHgB7dFBCgIxDEDR1COMx3MjWBjPJHbhAR3BhW6E2N7id/gPQrb5pKzrNVu7x7IcY1bb9ozSd/aYuLVHzOpyPkXpn8jX+xMzy983DrEThtAYQmMIjSE0htAYQmMIjSE0htAYQmMIjSE0htAYQmMIjSE0htAYQmMIjSE0htAYQrObkCFrrTn2rDPu/wNEoUe7yFL+7QAAAABJRU5ErkJggg==";
+$bg-url: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAACRSURBVHgB7dExCsJAEEDRWXsLY+HhbAQX4qHMEY0QRRthzN7ib/gPhmnnM2UcbzlN9xiGY/Rqnh9R1p37wyneryV6db2co6yfyOfyiZ7l7xu72AhDaAyhMYTGEBpDaAyhMYTGEBpDaAyhMYTGEBpDaAyhMYTGEBpDaAyhMYTGEBpDaAyh2UxIk7XWbLvXaff/AUCdR7tFiNQqAAAAAElFTkSuQmCC";
 $bg-width: 50px;
 $bg-height: 50px;
 
@@ -31,10 +31,10 @@ $bg-height: 50px;
 #infinite-grids {
   background: url($bg-url) repeat 0 0;
 
-  -webkit-animation: bg-scrolling-reverse 3s infinite; /* Safari 4+ */
-  -moz-animation:    bg-scrolling-reverse 3s infinite; /* Fx 5+ */
-  -o-animation:      bg-scrolling-reverse 3s infinite; /* Opera 12+ */
-  animation:         bg-scrolling-reverse 3s infinite; /* IE 10+ */
+  -webkit-animation: bg-scrolling-reverse 3.5s infinite; /* Safari 4+ */
+  -moz-animation:    bg-scrolling-reverse 3.5s infinite; /* Fx 5+ */
+  -o-animation:      bg-scrolling-reverse 3.5s infinite; /* Opera 12+ */
+  animation:         bg-scrolling-reverse 3.5s infinite; /* IE 10+ */
   -webkit-animation-timing-function: linear;
   -moz-animation-timing-function:    linear;
   -o-animation-timing-function:      linear;
