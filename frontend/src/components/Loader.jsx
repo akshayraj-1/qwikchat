@@ -36,7 +36,7 @@ function Loader() {
         const timer = setInterval(() => {
             if (idx === text.length) idx = 0;
             setLoadingText(text[idx++]);
-        }, 3500);
+        }, 3000);
 
         return () => clearInterval(timer);
     }, [loadingText]);
