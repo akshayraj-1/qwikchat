@@ -25,10 +25,10 @@ function Chat({socket}) {
 
         setNewMessageCount(prevState => {
             if (document.visibilityState === "hidden" && prevState + 1 > 0) {
-                document.title = `Byte Threads (${prevState + 1})`;
+                document.title = `QwikChat (${prevState + 1})`;
                 return prevState + 1;
             } else {
-                document.title = "Byte Threads";
+                document.title = "QwikChat";
                 return 0;
             }
         });
@@ -37,7 +37,7 @@ function Chat({socket}) {
     useEffect(() => {
         const handleVisibilityChange = () => {
             if (document.visibilityState === "visible") {
-                document.title = "Byte Threads";
+                document.title = "QwikChat";
                 setNewMessageCount(0);
             }
         }
