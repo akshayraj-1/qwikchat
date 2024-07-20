@@ -28,10 +28,11 @@ const variants = {
 
 function Loader() {
 
-    const [loadingText, setLoadingText] = useState("weaving the threads...");
+    const loadingMessage = ["preparing the room...", "just a moment...", "tuning in...", "almost ready!"]
+    const [loadingText, setLoadingText] = useState(loadingMessage[0]);
 
     useEffect(() => {
-        let text = ["weaving the threads...", "connecting the threads...", "almost done..."];
+        let text = [...loadingMessage];
         let idx = 0;
         const timer = setInterval(() => {
             if (idx === text.length) idx = 0;
