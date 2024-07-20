@@ -4,38 +4,38 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="author" content="Akshay Raj" />
-    <meta name="description" content="Byte Threads -  a real-time chat application that allows users to create ephemeral chat rooms without the need for accounts." />
-    <meta name="keywords" content="Byte Threads, Temp Chat, Chat, Ephemeral, Instant Messaging, Temporary Chat, No Accounts, Animated EmoteIcons, Code Snippets, Image Sharing" />
+    <meta name="description" content="QwikChat -  a real-time chat application that allows users to create ephemeral chat rooms without the need for accounts." />
+    <meta name="keywords" content="QwikChat, Temp Chat, Chat, Ephemeral, Instant Messaging, Temporary Chat, No Accounts, Animated EmoteIcons, Code Snippets, Image Sharing" />
     <meta name="robots" content="index, follow" />
     <meta name="language" content="English" />
 
-    <meta property="og:title" content="Byte Threads" />
+    <meta property="og:title" content="QwikChat" />
     <meta property="og:description" content="A real-time chat application that allows users to create ephemeral chat rooms without the need for accounts." />
-    <meta property="og:image" content="https://bytethreads.web.app/thumb.png" />
-    <meta property="og:url" content="https://bytethreads.web.app/" />
+    <meta property="og:image" content="https://qwikchat.web.app/thumb.png" />
+    <meta property="og:url" content="https://qwikchat.web.app/" />
     <meta property="og:type" content="website" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <title>Byte Threads</title>
+    <title>QwikChat</title>
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "WebApplication",
-        "name": "Byte Threads",
-        "url": "https://bytethreads.web.app/",
+        "name": "QwikChat",
+        "url": "https://qwikchat.web.app/",
         "author": {
           "@type": "Person",
           "name": "Akshay Raj"
         },
-        "description": "Byte Threads is a real-time chat application that allows users to create ephemeral chat rooms without the need for accounts.",
+        "description": "QwikChat is a real-time chat application that allows users to create ephemeral chat rooms without the need for accounts.",
         "applicationCategory": "Chat",
-        "keywords": "Byte Threads, Chat, Ephemeral, Instant Messaging, Temp Chat, Temporary Chat, No Accounts, Animated EmoteIcons, Code Snippets, Image Sharing",
+        "keywords": "QwikChat, Chat, Ephemeral, Instant Messaging, Temp Chat, Temporary Chat, No Accounts, Animated EmoteIcons, Code Snippets, Image Sharing",
         "operatingSystem": "All",
         "dateCreated": "2024-03-01",
-        "softwareVersion": "2.2.9"
+        "softwareVersion": "2.4.0"
       }
     </script>
 
@@ -43,5 +43,13 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
+    <script>
+      const oldDomain = "bytethreads.web.app";
+      const newDomain = "qwikchat.web.app";
+      if (window.location.hostname === oldDomain) {
+        alert("This page has moved to a new domain. You will be redirected to the new site.");
+        window.location.href = window.location.href.replace(oldDomain, newDomain);
+      }
+    </script>
   </body>
 </html>
