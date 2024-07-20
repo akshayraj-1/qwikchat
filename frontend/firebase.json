@@ -11,7 +11,7 @@
       "rewrites": [
         {
           "source": "**",
-          "destination": "/index.html"
+          "destination": "https://qwikchat.web.app/"
         }
       ]
     },
@@ -31,7 +31,7 @@
       ]
     },
     {
-      "site": "aachat",
+      "site": "qwikchat",
       "public": "dist",
       "ignore": [
         "firebase.json",
