@@ -2,7 +2,7 @@
 
 QwikChat is a real-time chat application that allows users to create ephemeral chat rooms without the need for accounts. It supports animated emote-icons, code snippets highlighting, and the ability to send images seamlessly.
 
-Visit ByteThreads: [https://qwikchat.web.app](https://qwikchat.web.app)
+Visit QwikChat: [https://qwikchat.web.app](https://qwikchat.web.app)
 
 ## Features
 
