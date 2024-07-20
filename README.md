@@ -1,8 +1,8 @@
-# ByteThreads
+# QwikChat
 
-ByteThreads is a real-time chat application that allows users to create ephemeral chat rooms without the need for accounts. It supports animated emote-icons, code snippets highlighting, and the ability to send images seamlessly.
+QwikChat is a real-time chat application that allows users to create ephemeral chat rooms without the need for accounts. It supports animated emote-icons, code snippets highlighting, and the ability to send images seamlessly.
 
-Visit ByteThreads: [https://bytethreads.web.app](https://bytethreads.web.app)
+Visit ByteThreads: [https://qwikchat.web.app](https://qwikchat.web.app)
 
 ## Features
 
