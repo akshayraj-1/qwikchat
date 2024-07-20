@@ -1,4 +1,4 @@
-import { v4 as uuidv4 } from 'uuid';
+import {v4 as uuidv4} from 'uuid';
 import SyntaxHighlighter from "react-syntax-highlighter";
 
 import cn from "../utils/cn.util.js";
@@ -18,7 +18,7 @@ function CodeHighlight({message}) {
                                    style={CustomSyntaxStyle}
                                    wrapLongLines={true}
                                    title={"Click to copy the code"}
-                                   className={cn(hasOnlyCode ? "rounded-md" : "rounded-md my-2", "cursor-pointer break-words")}
+                                   className={cn(hasOnlyCode ? "rounded-md" : "rounded-md my-2", "cursor-pointer break-words whitespace-pre")}
                                    onClick={() => {
                                        navigator.clipboard.writeText(part.trim()).then(r => {
                                            window.alert("Copied to clipboard");
@@ -29,7 +29,7 @@ function CodeHighlight({message}) {
                 </SyntaxHighlighter>
             );
         } else {
-            return <p key={uuidv4()} className="break-words" style={{ wordBreak: 'break-word' }}>{part}</p>;
+            return <p key={uuidv4()} className="break-words hyphens-auto" style={{wordBreak: 'break-word'}}>{part}</p>;
         }
     });
 
