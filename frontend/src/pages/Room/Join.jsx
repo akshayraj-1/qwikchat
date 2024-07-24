@@ -64,7 +64,7 @@ function Join({socket, roomId}) {
                 {/*background*/}
                 <motion.div initial={{opacity: 0}}
                             animate={{opacity: 0.5, transition: {duration: 0.5, ease: "easeIn"}}}
-                            className="absolute h-full w-full bg-layerBlur1 bg-no-repeat bg-cover bg-center blur-xl"/>
+                            className="absolute h-full w-full bg-layerBlur1 bg-no-repeat bg-cover bg-center blur-[120px]"/>
 
                 {/*input box*/}
                 <motion.div variants={variants} initial="initial" animate="final"
