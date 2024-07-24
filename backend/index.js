@@ -96,7 +96,7 @@ io.on(SocketConfig.events.ON_CONNECT, socket => {
 
     // Handling Received Message
     socket.on(SocketConfig.events.SEND_MESSAGE, (roomId, messageModel) => {
-        if (messageModel === null || messageModel.content === '' || messageModel.content === undefined || messageModel.content === null) return;
+        if (!messageModel || !messageModel.content) return;
         io.to(roomId).emit(SocketConfig.events.BROADCAST_MESSAGE, new ResponseModel(true, "new message", {
             message: messageModel
         }));
