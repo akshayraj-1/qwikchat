@@ -1,5 +1,5 @@
 import {io} from "socket.io-client";
-import {useEffect, useState} from "react";
+import {useEffect, useRef, useState} from "react";
 import SocketConfig from "../../../backend/socket-config.json";
 import SocketMessageConfig from "../../../backend/socket-message-config.json";
 import RoomModel from "../models/room.model.js";
@@ -8,18 +8,18 @@ import MessageModel from "../models/message.model.js";
 
 function useChatRoomSocket() {
 
-    const [socket, setSocket] = useState(io(import.meta.env.VITE_SERVER_URL));
+    const socket = useRef(io(import.meta.env.VITE_SERVER_URL));
     const [data, setData] = useState({user: null, room: null, messages: []});
 
     useEffect(() => {
 
         // Handle Connect
-        socket.on(SocketConfig.events.CONNECT, () => {
+        socket.current.on(SocketConfig.events.CONNECT, () => {
             console.log("Connected");
         });
 
         // Handle On Disconnect
-        socket.on(SocketConfig.events.ON_DISCONNECT, () => {
+        socket.current.on(SocketConfig.events.ON_DISCONNECT, () => {
             updateData({
                 user: new UserModel({ connected: false }),
                 room: { users: [] },
@@ -32,7 +32,7 @@ function useChatRoomSocket() {
         });
 
         // Handle On Receive Message
-        socket.on(SocketConfig.events.BROADCAST_MESSAGE, (response) => {
+        socket.current.on(SocketConfig.events.BROADCAST_MESSAGE, (response) => {
             updateData({
                 messages: [response.data.message],
                 room: response.data.room ? new RoomModel({
@@ -42,10 +42,10 @@ function useChatRoomSocket() {
         });
 
         return () => {
-            socket.disconnect();
+            socket.current.disconnect();
         }
 
-    }, [socket]);
+    }, [socket.current]);
 
     // Join Room
     const joinRoom = (roomId, name, avatar, callback) => {
@@ -54,7 +54,7 @@ function useChatRoomSocket() {
         if (name.includes(" ")) name = name.substring(0, name.indexOf(" "));
 
         // Handle On Join Room
-        socket.emit(SocketConfig.events.JOIN_ROOM, { roomId, name, avatar }, (response) => {
+        socket.current.emit(SocketConfig.events.JOIN_ROOM, { roomId, name, avatar }, (response) => {
             if (response.success) {
                 updateData({
                     room: response.data.room,
@@ -78,7 +78,7 @@ function useChatRoomSocket() {
         if (message === '' || !data.user.connected) return;
 
         // Handle Send Message
-        socket.emit(SocketConfig.events.SEND_MESSAGE, data.room.id, new MessageModel({
+        socket.current.emit(SocketConfig.events.SEND_MESSAGE, data.room.id, new MessageModel({
             senderId: data.user.id,
             senderName: data.user.name,
             senderAvatar: data.user.avatar,
