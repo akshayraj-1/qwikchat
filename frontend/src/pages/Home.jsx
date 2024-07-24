@@ -6,6 +6,7 @@ import Footer from "../components/Footer.jsx";
 import Button from "../components/Button.jsx";
 import MeshGradient from "../components/Backgrounds/MeshGradient.jsx";
 import InfiniteGrids from "../components/Backgrounds/InfiniteGrids/InfiniteGrids.jsx";
+import RectLight from "../components/Backgrounds/RectLight.jsx";
 
 const variants = {
     initial: {
@@ -47,28 +48,30 @@ function Home() {
     return (
         <section className="relative h-full w-full">
             <motion.div variants={variants.mainDiv} initial="initial" animate="final" className="relative h-full w-full">
-                <InfiniteGrids className="h-full w-full opacity-85">
-                    <MeshGradient className="flex flex-col justify-center items-center h-full w-full px-5 sm:px-9" opacity={0.9}>
+                <InfiniteGrids opacity={0.8}>
+                    <RectLight opacity={0.35}>
+                        <MeshGradient className="flex flex-col justify-center items-center h-full w-full px-5 sm:px-9" opacity={0.8}>
 
-                        <motion.div className="font-semibold"
-                                    style={{fontSize: 'clamp(40px, 4.3vw, 80px)'}}
-                                    variants={variants} initial="initial" animate="final" >
-                            <h1 className="overflow-hidden">
-                                {
-                                    Array.from(["Connect.", "Chat.", "Disconnect."]).map((label, idx) => {
-                                        return <motion.span key={idx} variants={variants}
-                                                            className="inline-block">{label}</motion.span>
-                                    })
-                                }
-                            </h1>
-                            <motion.div variants={variants} className="flex justify-start sm:justify-center flex-wrap gap-5 mt-9">
-                                <Button label="Create Room"
-                                        effect={{click: {scale: 0.95}}}
-                                        onClick={onBtnCreateRoomClick}/>
+                            <motion.div className="font-semibold"
+                                        style={{fontSize: 'clamp(40px, 4.3vw, 80px)'}}
+                                        variants={variants} initial="initial" animate="final" >
+                                <h1 className="overflow-hidden">
+                                    {
+                                        Array.from(["Connect.", "Chat.", "Disconnect."]).map((label, idx) => {
+                                            return <motion.span key={idx} variants={variants}
+                                                                className="inline-block">{label}</motion.span>
+                                        })
+                                    }
+                                </h1>
+                                <motion.div variants={variants} className="flex justify-start sm:justify-center flex-wrap gap-5 mt-10">
+                                    <Button label="Create Room"
+                                            effect={{click: {scale: 0.95}}}
+                                            onClick={onBtnCreateRoomClick}/>
+                                </motion.div>
                             </motion.div>
-                        </motion.div>
 
-                    </MeshGradient>
+                        </MeshGradient>
+                    </RectLight>
                 </InfiniteGrids>
                 <Footer/>
             </motion.div>
