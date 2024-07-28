@@ -1,6 +1,6 @@
 import { Suspense } from "react";
 import { Outlet } from "react-router-dom";
-import Navbar from "./components/Navbar.jsx";
+import Navbar from "./components/UI/Navbar.jsx";
 import CircularProgress from "@mui/joy/CircularProgress";
 
 function App() {
