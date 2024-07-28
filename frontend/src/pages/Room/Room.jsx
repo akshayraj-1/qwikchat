@@ -2,9 +2,9 @@ import {useEffect, useState} from "react";
 import {useParams} from "react-router-dom";
 import useChatRoomSocket from "../../hooks/useChatRoomSocket.js";
 
-import Join from "./Join.jsx";
-import Chat from "./Chat.jsx";
-import BannerModal from "../../components/Modal/BannerModal.jsx";
+import Join from "./sub-pages/Join.jsx";
+import Chat from "./sub-pages/Chat.jsx";
+import BannerModal from "../../components/Modals/BannerModal.jsx";
 
 
 function Room() {
