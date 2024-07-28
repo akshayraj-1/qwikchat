@@ -2,11 +2,10 @@ import {useNavigate} from "react-router-dom";
 import {motion} from "framer-motion";
 import {generate} from "random-words";
 
-import Footer from "../components/Footer.jsx";
-import Button from "../components/Button.jsx";
+import Footer from "../components/UI/Footer.jsx";
+import Button from "../components/UI/Button.jsx";
 import MeshGradient from "../components/Backgrounds/MeshGradient.jsx";
 import InfiniteGrids from "../components/Backgrounds/InfiniteGrids/InfiniteGrids.jsx";
-import RectLight from "../components/Backgrounds/RectLight.jsx";
 
 const variants = {
     initial: {
