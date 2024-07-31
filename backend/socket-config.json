@@ -1,6 +1,6 @@
 {
   "maxBufferSize": 1e8,
-  "maxRoomSize": 3,
+  "maxRoomSize": 25,
   "events": {
     "CONNECT": "connect",
     "ON_CONNECT": "connection",
