@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 import ImageData from "./src/values/images-data.json";
+
 export default {
   content: [
     "./index.html",
@@ -16,12 +17,11 @@ export default {
         accentDark: "#7557b2",
         error: "#ff708c",
         success: "#79ff92",
-        textPrimary: "#fff",
+        textPrimary: "#e6edf3",
         textPrimaryLight: "#dadada",
         textSecondary: "#838C96",
       },
       backgroundImage: {
-        glow: `url(${ImageData.mainBg})`,
         layerBlur1: `url(${ImageData.backdropBg})`
       },
       fontFamily: {
