@@ -51,6 +51,10 @@ function useChatRoomSocket() {
     const joinRoom = (roomId, name, avatar, callback) => {
 
         if (!roomId || !name || typeof callback !== "function") return;
+        if (name.length > 20) {
+            callback({success: false, message: "username is too long"});
+            return;
+        }
         if (name.includes(" ")) name = name.substring(0, name.indexOf(" "));
 
         // Handle On Join Room
