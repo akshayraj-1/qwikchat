@@ -50,7 +50,7 @@ function Home() {
                 <InfiniteGrids opacity={0.85}>
                     <MeshGradient className="flex flex-col justify-center items-center h-full w-full px-5 sm:px-9" opacity={0.8}>
 
-                        <motion.div className="font-semibold"
+                        <motion.div className="font-bold tracking-normal"
                                     style={{fontSize: 'clamp(40px, 4.3vw, 80px)'}}
                                     variants={variants} initial="initial" animate="final" >
                             <h1 className="overflow-hidden">
