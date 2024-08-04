@@ -2,6 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+    font-family: 'Mona-Sans';
+    src:
+            url('/fonts/Mona-Sans.woff2') format('woff2 supports variations'),
+            url('/fonts/Mona-Sans.woff2') format('woff2-variations');
+    font-weight: 400 900;
+    font-stretch: 125% 125%;
+}
+
 *::-webkit-scrollbar {
     @apply w-0;
 }
@@ -9,9 +18,10 @@
 body, html {
     @apply
     h-full w-full
-    overflow-x-hidden 
-    font-firacode
+    overflow-x-hidden
     text-textPrimary
+    font-mona
+    tracking-wider
     bg-primary 
     scroll-smooth
     antialiased;
