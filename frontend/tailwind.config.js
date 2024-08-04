@@ -25,7 +25,7 @@ export default {
         layerBlur1: `url(${ImageData.backdropBg})`
       },
       fontFamily: {
-        firacode: "Fira Code, monospace",
+        mona: "Mona-Sans, sans-serif",
         poppins: "Poppins, sans-serif"
       }
     },
