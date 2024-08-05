@@ -23,4 +23,4 @@ firebase deploy
 Write-Host "Deployed to the server"
 
 # Step 5: Return to the original directory
-Set-Location "C:\Users\aksha\Documents\Akshay\Projects\React\qwik-chat\"
+Set-Location "C:\Users\aksha\Documents\Projects\React\qwik-chat\"
