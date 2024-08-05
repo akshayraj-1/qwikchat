@@ -47,8 +47,8 @@ function Home() {
     return (
         <section className="relative h-full w-full">
             <motion.div variants={variants.mainDiv} initial="initial" animate="final" className="relative h-full w-full">
-                <InfiniteGrids opacity={0.85}>
-                    <MeshGradient className="flex flex-col justify-center items-center h-full w-full px-5 sm:px-9" opacity={0.8}>
+                <InfiniteGrids opacity={0.95}>
+                    <MeshGradient className="flex flex-col justify-center items-center h-full w-full px-5 sm:px-9" opacity={0.95}>
 
                         <motion.div className="font-bold tracking-normal"
                                     style={{fontSize: 'clamp(40px, 4.3vw, 80px)'}}
