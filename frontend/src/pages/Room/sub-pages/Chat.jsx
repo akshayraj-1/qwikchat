@@ -61,7 +61,6 @@ function Chat({socket}) {
         autoResize();
     }, [inputMessage]);
 
-
     const sendTextMessage = () => {
         if (inputRef === null || inputRef.current === null) return;
         if (inputMessage.trim().length > 0) {
