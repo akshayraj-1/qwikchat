@@ -74,7 +74,7 @@ function Chat({socket}) {
         const maxSize = 3 * 1024 * 1024;
 
         if (file && file.size > maxSize) {
-            window.alert("File size exceeds 3MB. Please choose a smaller file.");
+            showToast("File size exceeds 3 Mb");
             return;
         }
         const reader = new FileReader();
