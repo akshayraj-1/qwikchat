@@ -8,9 +8,9 @@ function useCustomToast() {
     const [toastType, setToastType] = useState("error");
 
     const showToast = useCallback((message, type = "error") => {
-        setToastVisible(true);
-        setToastMessage(message);
         setToastType(type);
+        setToastMessage(message);
+        setToastVisible(true);
     }, []);
 
     const CustomToastModal = () => {
