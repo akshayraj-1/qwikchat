@@ -34,7 +34,12 @@ const MessageBubble = React.memo(({user, messageModel, handleImageClick, handleM
                 {
                     messageModel.type === SocketMessageConfig.type.TEXT
                         ? emoteIcon
-                            ? <img className="size-32 select-none" src={emoteIcon.url} alt={emoteIcon.description} onContextMenu={(e) => e.preventDefault()}/>
+                            ? <img className="size-32 select-none"
+                                   src={emoteIcon.url}
+                                   alt={emoteIcon.description}
+                                   draggable={false}
+                                   onContextMenu={(e) => e.preventDefault()}/>
+
                             : <div className={cn("rounded-l-xl rounded-br-xl", styles.textMessage)}>
                                 <MessageFormatter message={messageModel.content} onClick={handleMessageClick}/>
                             </div>
@@ -51,13 +56,23 @@ const MessageBubble = React.memo(({user, messageModel, handleImageClick, handleM
     const ReceiverMessage = () => {
         return (
             <div className={"flex gap-2 items-start w-auto md:max-w-[80%] my-3 me-16 self-start"}>
-                <img className={"rounded-full size-8 object-cover"} src={messageModel.senderAvatar} alt="user avatar" onContextMenu={(e) => e.preventDefault()}/>
+                <img className={"rounded-full size-8 object-cover"}
+                     src={messageModel.senderAvatar}
+                     alt={messageModel.senderName}
+                     draggable={false}
+                     onContextMenu={(e) => e.preventDefault()}/>
+
                 <div className={"flex flex-col gap-1.5"}>
                     <span className={"text-xs text-textSecondary select-none"}>{messageModel.senderName}</span>
                     {
                         messageModel.type === SocketMessageConfig.type.TEXT
                             ? emoteIcon
-                                ? <img className="size-32 select-none" src={emoteIcon.url} alt={emoteIcon.description} onContextMenu={(e) => e.preventDefault()}/>
+                                ? <img className="size-32 select-none"
+                                       src={emoteIcon.url}
+                                       alt={emoteIcon.description}
+                                       draggable={false}
+                                       onContextMenu={(e) => e.preventDefault()}/>
+
                                 : <div className={cn("rounded-r-xl rounded-bl-xl", styles.textMessage)}>
                                     <MessageFormatter message={messageModel.content} onClick={handleMessageClick}/>
                                 </div>
