@@ -112,7 +112,7 @@ function useChatRoomSocket() {
 
     // Get Random Avatar
     const getRandomAvatar = () => {
-        return "https://firebasestorage.googleapis.com/v0/b/bytethreads.appspot.com/o/avatars%2Favatar%20(" + (Math.random() * 38 + 1).toFixed(0) + ").png?alt=media"
+        return "https://firebasestorage.googleapis.com/v0/b/bytethreads.appspot.com/o/avatars%2Favatar%20(" + (Math.random() * 38).toFixed(0) + ").png?alt=media"
     }
 
     return {
