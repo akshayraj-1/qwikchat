@@ -5,14 +5,14 @@ import ImageModal from "../../../components/Modals/ImageModal.jsx";
 import cn from "../../../utils/cn.util.js";
 import useCustomToast from "../../../hooks/useCustomToast.jsx";
 
-function Chat({socket}) {
+function Chat({ socket }) {
 
     const chatsRef = useRef(null);
     const inputRef = useRef(null);
     const pickerRef = useRef(null);
     const [inputMessage, setInputMessage] = useState("");
     const [selectedImage, setSelectedImage] = useState(null);
-    const [newMessageCount, setNewMessageCount] = useState(0);
+    const [_, setNewMessageCount] = useState(0);
     const { CustomToastModal, showToast } = useCustomToast();
 
     useEffect(() => {
@@ -71,6 +71,7 @@ function Chat({socket}) {
 
     const sendImageMessage = (e) => {
         const file = e.target.files[0];
+        e.target.value = null;
         const maxSize = 3 * 1024 * 1024;
 
         if (file && file.size > maxSize) {
@@ -81,6 +82,7 @@ function Chat({socket}) {
         reader.onload = function() {
             const arrayBuffer = reader.result;
             socket.actions.sendMessage(arrayBuffer, false);
+
         };
         file && reader.readAsArrayBuffer(file);
     }
