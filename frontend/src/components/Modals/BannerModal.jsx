@@ -34,7 +34,7 @@ function BannerModal({showModal = false, title, message, position = "bottom", on
                             <h2 className="text-xl font-medium">{title}</h2>
                             <p className="text-textSecondary text-sm font-thin mt-3">{message}</p>
                         </div>
-                        <Button className="my-auto" label="Continue" filled={true} onClick={onConfirm}/>
+                        <Button className="my-auto w-full sm:w-auto" label="Continue" filled={true} onClick={onConfirm}/>
                     </motion.div>
                 </Backdrop>
             }
