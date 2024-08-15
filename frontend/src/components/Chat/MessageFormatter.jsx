@@ -18,7 +18,7 @@ function MessageFormatter({message, onClick}) {
                 </p>
             ) : (
                 <a
-                    key={uuidv4()} href={part} target="_blank" rel="noopener noreferrer"
+                    key={uuidv4()} href={part} target="_blank" rel="noopener noreferrer" style={{wordBreak: "break-all"}}
                     className="tracking-normal break-words text-accent cursor-pointer hover:underline">
                     {part}
                 </a>
