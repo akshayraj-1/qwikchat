@@ -47,12 +47,14 @@ function ImageModal({show = false, image, onCancel}) {
             {
                 show &&
                 <Backdrop onClick={onCancel}>
-                    <motion.img
-                        className={cn("max-h-[80%] w-auto object-contain", zoomedIn ? "scale-[2] cursor-zoom-out" : "scale-100 cursor-zoom-in")}
-                        style={{ transition: "all 0.3s ease-in-out" }}
-                        src={image}
-                        onClick={handleImageClick}
-                    />
+                    <div className="flex justify-center items-center size-full overflow-auto">
+                        <motion.img
+                            className={cn("max-h-[80%] w-auto object-contain touch-pinch-zoom", zoomedIn ? "scale-[2] cursor-zoom-out" : "scale-100 cursor-zoom-in")}
+                            style={{transition: "all 0.3s ease-in-out"}}
+                            src={image}
+                            onClick={handleImageClick}
+                        />
+                    </div>
                 </Backdrop>
             }
         </AnimatePresence>
