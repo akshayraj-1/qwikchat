@@ -116,7 +116,8 @@ function useChatRoomSocket() {
     }
 
     return {
-        data, actions: { joinRoom, sendMessage, getRandomAvatar }
+        data,
+        actions: { joinRoom, sendMessage, getRandomAvatar }
     };
 
 }
