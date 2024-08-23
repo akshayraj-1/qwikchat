@@ -9,5 +9,8 @@ export default defineConfig({
     envDir: './',
     envFile: '.env.production',
     chunkSizeWarningLimit: 2000
+  },
+  server: {
+    port: 6969
   }
 })
