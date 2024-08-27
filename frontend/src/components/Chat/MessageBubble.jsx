@@ -1,4 +1,4 @@
-import React, {useMemo} from "react";
+import React, {useMemo, useState} from "react";
 import {motion} from "framer-motion";
 import MessageFormatter from "./MessageFormatter.jsx";
 
@@ -6,10 +6,26 @@ import cn from "../../utils/cn.util.js";
 import getEmoteIcon from "../../utils/emoteicon.util.js";
 import SocketMessageConfig from "../../../../backend/socket-message-config.json";
 
+
+const variants = {
+    emoteIcon: {
+        initial: {opacity: 0},
+        animate: {
+            opacity: 1,
+            transition: {
+                duration: 0.5,
+                ease: "anticipate",
+            }
+        }
+    }
+}
+
 // eslint-disable-next-line react/display-name
-const MessageBubble = React.memo(({user, messageModel, handleImageClick, handleMessageClick}) => {
+function MessageBubble({user, messageModel, handleImageClick, handleMessageClick}) {
 
     const emoteIcon = useMemo(() => messageModel.type === SocketMessageConfig.type.TEXT && getEmoteIcon(messageModel.content), [messageModel]);
+    const [showEmoteIcon, setShowEmoteIcon] = useState(false);
+
     const styles = {
         textMessage: "text-base sm:text-sm text-start text-textPrimaryLight text-pretty leading-relaxed font-poppins py-2.5 px-4 bg-secondaryVariant whitespace-pre-wrap",
         imageMessage: "h-80 w-auto p-1 object-contain rounded-xl cursor-pointer select-none"
@@ -34,11 +50,16 @@ const MessageBubble = React.memo(({user, messageModel, handleImageClick, handleM
                 {
                     messageModel.type === SocketMessageConfig.type.TEXT
                         ? emoteIcon
-                            ? <img className="size-32 select-none"
-                                   src={emoteIcon.url}
-                                   alt={emoteIcon.description}
-                                   draggable={false}
-                                   onContextMenu={(e) => e.preventDefault()}/>
+                            ? <motion.img
+                                variants={variants.emoteIcon}
+                                initial="initial"
+                                animate={showEmoteIcon ? "animate" : "initial"}
+                                className="size-32 select-none"
+                                src={emoteIcon.url}
+                                alt={emoteIcon.description}
+                                draggable={false}
+                                onLoad={() => setShowEmoteIcon(true)}
+                                onContextMenu={(e) => e.preventDefault()}/>
 
                             : <div className={cn("rounded-l-xl rounded-br-xl", styles.textMessage)}>
                                 <MessageFormatter message={messageModel.content} onClick={handleMessageClick}/>
@@ -67,11 +88,16 @@ const MessageBubble = React.memo(({user, messageModel, handleImageClick, handleM
                     {
                         messageModel.type === SocketMessageConfig.type.TEXT
                             ? emoteIcon
-                                ? <img className="size-32 select-none"
-                                       src={emoteIcon.url}
-                                       alt={emoteIcon.description}
-                                       draggable={false}
-                                       onContextMenu={(e) => e.preventDefault()}/>
+                                ? <motion.img
+                                    variants={variants.emoteIcon}
+                                    initial="initial"
+                                    animate={showEmoteIcon ? "animate" : "initial"}
+                                    className="size-32 select-none"
+                                    src={emoteIcon.url}
+                                    alt={emoteIcon.description}
+                                    draggable={false}
+                                    onLoad={() => setShowEmoteIcon(true)}
+                                    onContextMenu={(e) => e.preventDefault()}/>
 
                                 : <div className={cn("rounded-r-xl rounded-bl-xl", styles.textMessage)}>
                                     <MessageFormatter message={messageModel.content} onClick={handleMessageClick}/>
@@ -88,7 +114,8 @@ const MessageBubble = React.memo(({user, messageModel, handleImageClick, handleM
     }
 
     return (
-        <motion.div className="flex flex-col w-full" initial={{ y:10, opacity: 0 }} animate={{ y: 0, opacity: 1, transition: { duration: 0.15, ease: "easeIn" } }}>
+        <motion.div className="flex flex-col w-full" initial={{y: 10, opacity: 0}}
+                    animate={{y: 0, opacity: 1, transition: {duration: 0.15, ease: "easeIn"}}}>
             {
                 messageModel.senderId === SocketMessageConfig.sender.SYSTEM
                     ? <SystemMessage/>
@@ -98,8 +125,8 @@ const MessageBubble = React.memo(({user, messageModel, handleImageClick, handleM
             }
         </motion.div>
     )
-}, (prevProps, nextProps) => {
-    return prevProps.messageModel === nextProps.messageModel && prevProps.user.id === nextProps.user.id;
-});
+}
 
-export default MessageBubble;
+export default React.memo(MessageBubble, (prevProps, nextProps) => {
+    return prevProps.messageModel === nextProps.messageModel && prevProps.user.id === nextProps.user.id
+});
