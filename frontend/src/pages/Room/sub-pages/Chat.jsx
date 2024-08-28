@@ -105,10 +105,11 @@ function Chat({ socket }) {
                             return <MessageBubble key={message.id}
                                                   user={socket.data.user}
                                                   messageModel={message}
-                                                  handleImageClick={(e) => setSelectedImage(e.target.src)}
-                                                  handleMessageClick={() => {
-                                                      console.log(message);
-                                                      showToast("Copied to clipboard", "success")
+                                                  onImageClick={(e) => setSelectedImage(e.target.src)}
+                                                  onTextClick={(text) => {
+                                                      navigator.clipboard.writeText(text).then(() => {
+                                                          showToast("Copied to clipboard", "success");
+                                                      });
                                                   }}
                             />
                         })

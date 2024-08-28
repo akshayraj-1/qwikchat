@@ -11,7 +11,7 @@ Visit QwikChat: [https://qwikchat.web.app](https://qwikchat.web.app)
 - **No Accounts Required**: Users can join and use chat rooms without signing up.
 - **Animated EmoteIcons**: Express yourself with animated emojis.
 - **Code Snippets Highlighting**: Share and view code snippets with syntax highlighting.
-- **Image Sharing**: Send images directly in the chat.
+- **ImageView Sharing**: Send images directly in the chat.
 
 ## Stack
 

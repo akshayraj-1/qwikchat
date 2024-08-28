@@ -1,35 +1,35 @@
-import React, {useMemo, useState} from "react";
+import React, {useMemo} from "react";
 import {motion} from "framer-motion";
-import MessageFormatter from "./MessageFormatter.jsx";
-
 import cn from "../../utils/cn.util.js";
 import getEmoteIcon from "../../utils/emoteicon.util.js";
 import SocketMessageConfig from "../../../../backend/socket-message-config.json";
+import ImageView from "./ImageView.jsx";
+import TextView from "./TextView.jsx";
 
 
 const variants = {
-    emoteIcon: {
-        initial: {opacity: 0},
+    parentBubble: {
+        initial: {y: 10, opacity: 0},
         animate: {
+            y: 0,
             opacity: 1,
             transition: {
-                duration: 0.5,
-                ease: "anticipate",
+                duration: 0.15,
+                ease: "easeIn",
             }
         }
     }
 }
 
-// eslint-disable-next-line react/display-name
-function MessageBubble({user, messageModel, handleImageClick, handleMessageClick}) {
+function MessageBubble({user, messageModel, onImageClick, onTextClick}) {
 
-    const emoteIcon = useMemo(() => messageModel.type === SocketMessageConfig.type.TEXT && getEmoteIcon(messageModel.content), [messageModel]);
-    const [showEmoteIcon, setShowEmoteIcon] = useState(false);
-
-    const styles = {
-        textMessage: "text-base sm:text-sm text-start text-textPrimaryLight text-pretty leading-relaxed font-poppins py-2.5 px-4 bg-secondaryVariant whitespace-pre-wrap",
-        imageMessage: "h-80 w-auto p-1 object-contain rounded-xl cursor-pointer select-none"
-    }
+    const {isSender, emoteIcon} = useMemo(
+        () => ({
+            isSender: user.id === messageModel.senderId,
+            emoteIcon: messageModel.type === SocketMessageConfig.type.TEXT && getEmoteIcon(messageModel.content)
+        }),
+        [messageModel]
+    );
 
     const SystemMessage = () => {
         return (
@@ -43,85 +43,38 @@ function MessageBubble({user, messageModel, handleImageClick, handleMessageClick
         )
     }
 
-    const SenderMessage = () => {
+    const UserMessage = () => {
         return (
-            <div className={"flex flex-col gap-1.5 items-end w-auto md:max-w-[80%] my-3 ms-8 self-end"}>
-                <span className={"block text-xs text-textSecondary select-none"}>you</span>
-                {
-                    messageModel.type === SocketMessageConfig.type.TEXT
-                        ? emoteIcon
-                            ? <motion.img
-                                variants={variants.emoteIcon}
-                                initial="initial"
-                                animate={showEmoteIcon ? "animate" : "initial"}
-                                className="size-32 select-none"
-                                src={emoteIcon.url}
-                                alt={emoteIcon.description}
-                                draggable={false}
-                                onLoad={() => setShowEmoteIcon(true)}
-                                onContextMenu={(e) => e.preventDefault()}/>
-
-                            : <div className={cn("rounded-l-xl rounded-br-xl", styles.textMessage)}>
-                                <MessageFormatter message={messageModel.content} onClick={handleMessageClick}/>
-                            </div>
-                        : <img className={cn(styles.textMessage, styles.imageMessage)}
-                               src={URL.createObjectURL(new Blob([messageModel.content]))}
-                               alt="image"
-                               onClick={handleImageClick}
-                               onContextMenu={(e) => e.preventDefault()}/>
+            <div className={cn(
+                "flex w-auto md:max-w-[80%] my-3",
+                isSender ? "flex-col items-end gap-1.5 self-end ms-8" : "gap-2 items-start self-start me-16"
+            )}>
+                {!isSender && <ImageView className={"rounded-full size-8 object-cover p-0 cursor-default"}
+                                         imageUrl={messageModel.senderAvatar}/>
                 }
-            </div>
-        )
-    }
-
-    const ReceiverMessage = () => {
-        return (
-            <div className={"flex gap-2 items-start w-auto md:max-w-[80%] my-3 me-16 self-start"}>
-                <img className={"rounded-full size-8 object-cover"}
-                     src={messageModel.senderAvatar}
-                     alt={messageModel.senderName}
-                     draggable={false}
-                     onContextMenu={(e) => e.preventDefault()}/>
-
-                <div className={"flex flex-col gap-1.5"}>
-                    <span className={"text-xs text-textSecondary select-none"}>{messageModel.senderName}</span>
+                <div className={cn("flex flex-col gap-1.5", isSender && "items-end self-end")}>
+                    <span
+                        className={"block text-xs text-textSecondary select-none"}>{isSender ? "you" : messageModel.senderName}</span>
                     {
                         messageModel.type === SocketMessageConfig.type.TEXT
                             ? emoteIcon
-                                ? <motion.img
-                                    variants={variants.emoteIcon}
-                                    initial="initial"
-                                    animate={showEmoteIcon ? "animate" : "initial"}
-                                    className="size-32 select-none"
-                                    src={emoteIcon.url}
-                                    alt={emoteIcon.description}
-                                    draggable={false}
-                                    onLoad={() => setShowEmoteIcon(true)}
-                                    onContextMenu={(e) => e.preventDefault()}/>
-
-                                : <div className={cn("rounded-r-xl rounded-bl-xl", styles.textMessage)}>
-                                    <MessageFormatter message={messageModel.content} onClick={handleMessageClick}/>
-                                </div>
-                            : <img className={cn(styles.textMessage, styles.imageMessage)}
-                                   src={URL.createObjectURL(new Blob([messageModel.content]))}
-                                   alt="image"
-                                   onClick={handleImageClick}
-                                   onContextMenu={(e) => e.preventDefault()}/>
+                                ? <ImageView imageUrl={emoteIcon.url} isEmote={true}/>
+                                : <TextView message={messageModel.content} onTextClick={onTextClick}
+                                            className={cn(isSender ? "rounded-l-xl rounded-br-xl" : "rounded-r-xl rounded-bl-xl")}/>
+                            : <ImageView imageUrl={URL.createObjectURL(new Blob([messageModel.content]))}
+                                         onClick={onImageClick}/>
                     }
                 </div>
             </div>
-        )
+        );
     }
 
     return (
-        <motion.div className="flex flex-col w-full" initial={{y: 10, opacity: 0}}
-                    animate={{y: 0, opacity: 1, transition: {duration: 0.15, ease: "easeIn"}}}>
+        <motion.div className="flex flex-col w-full" variants={variants.parentBubble} initial={"initial"} animate={"animate"}>
             {
                 messageModel.senderId === SocketMessageConfig.sender.SYSTEM
                     ? <SystemMessage/>
-                    : messageModel.senderId === user.id
-                        ? <SenderMessage/>
-                        : <ReceiverMessage/>
+                    : <UserMessage/>
             }
         </motion.div>
     )

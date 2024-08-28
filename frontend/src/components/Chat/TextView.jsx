@@ -5,7 +5,7 @@ import cn from "../../utils/cn.util.js";
 import {detectLanguage} from "../../utils/text.util.js";
 import CustomSyntaxStyle from "../../values/custom-syntax-style.json";
 
-function MessageFormatter({message, onClick}) {
+function TextView({message, onTextClick, className}) {
 
     const parts = message.split('```');
 
@@ -33,10 +33,12 @@ function MessageFormatter({message, onClick}) {
                 <SyntaxHighlighter key={uuidv4()}
                                    language={detectLanguage(part)}
                                    style={CustomSyntaxStyle}
+                                   lineProps={{style: {wordBreak: 'break-all', whiteSpace: 'pre-wrap'}}}
                                    wrapLongLines={true}
+                                   wrapLines={true}
                                    title={"Click to copy the code"}
-                                   className={cn("cursor-pointer break-words whitespace-pre tracking-normal")}
-                                   onClick={onClick}
+                                   className={cn("cursor-pointer tracking-normal")}
+                                   onClick={() => onTextClick(part)}
                 >
                     {part.trim()}
                 </SyntaxHighlighter>
@@ -46,7 +48,13 @@ function MessageFormatter({message, onClick}) {
         }
     });
 
-    return <div>{formattedParts}</div>;
+    return (
+        <div
+            className={cn("text-base sm:text-sm text-start text-textPrimaryLight text-pretty leading-relaxed font-poppins py-2.5 px-4 bg-secondaryVariant whitespace-pre-wrap", className)}
+        >
+            {formattedParts}
+        </div>
+    );
 }
 
-export default MessageFormatter;
+export default TextView;
