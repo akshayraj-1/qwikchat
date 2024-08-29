@@ -16,6 +16,7 @@ function ImageView({imageUrl, isEmote = false,  onClick = () => {}, className}) 
 
     const styles = cn(
         isEmote ? "size-32 select-none animate-pulse bg-secondaryLight/50 rounded-full" : "h-80 w-auto p-1 object-contain cursor-pointer rounded-xl bg-secondaryVariant",
+        "overflow-hidden",
         loaded ? isEmote && "bg-transparent rounded-none animate-none" : "",
         className
     );
@@ -26,7 +27,7 @@ function ImageView({imageUrl, isEmote = false,  onClick = () => {}, className}) 
                 variants={variants}
                 initial={"initial"}
                 animate={loaded && "animate"}
-                className="size-full"
+                className={cn("size-full", !isEmote && "rounded-xl")}
                 src={imageUrl}
                 draggable={false}
                 onLoad={() => setLoaded(true)}
