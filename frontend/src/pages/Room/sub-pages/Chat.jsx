@@ -1,4 +1,4 @@
-import React, {useEffect, useRef, useState} from "react";
+import React, {useCallback, useEffect, useRef, useState} from "react";
 import {ArrowUpFromDot, Paperclip} from 'lucide-react';
 import MessageBubble from "../../../components/Chat/MessageBubble.jsx";
 import ImageModal from "../../../components/Modals/ImageModal.jsx";
@@ -50,15 +50,11 @@ function Chat({ socket }) {
     }, []);
 
     // Handle
-    const autoResize = () => {
+    const autoResize = useCallback(() => {
         if (inputRef.current) {
             inputRef.current.style.height = 'auto';
             inputRef.current.style.height = `${inputRef.current.scrollHeight}px`;
         }
-    };
-
-    useEffect(() => {
-        autoResize();
     }, [inputMessage]);
 
     const sendTextMessage = () => {
@@ -67,7 +63,7 @@ function Chat({ socket }) {
             socket.actions.sendMessage(inputMessage, true);
             setInputMessage("");
         }
-    }
+    };
 
     const sendImageMessage = (e) => {
         const file = e.target.files[0];
@@ -85,7 +81,7 @@ function Chat({ socket }) {
 
         };
         file && reader.readAsArrayBuffer(file);
-    }
+    };
 
     return (
         <div className="relative h-full w-full">
