@@ -41,7 +41,7 @@ function MessageBubble({user, messageModel, onImageClick, onTextClick}) {
                 {messageModel.content}
             </span>
         )
-    }
+    };
 
     const UserMessage = () => {
         return (
@@ -67,7 +67,7 @@ function MessageBubble({user, messageModel, onImageClick, onTextClick}) {
                 </div>
             </div>
         );
-    }
+    };
 
     return (
         <motion.div className="flex flex-col w-full" variants={variants.parentBubble} initial={"initial"} animate={"animate"}>
@@ -77,7 +77,7 @@ function MessageBubble({user, messageModel, onImageClick, onTextClick}) {
                     : <UserMessage/>
             }
         </motion.div>
-    )
+    );
 }
 
 export default React.memo(MessageBubble, (prevProps, nextProps) => {
