@@ -43,7 +43,7 @@ function useChatRoomSocket() {
 
         return () => {
             socket.current.disconnect();
-        }
+        };
 
     }, [socket.current]);
 
@@ -89,7 +89,7 @@ function useChatRoomSocket() {
             content: message,
             type: isText ? SocketMessageConfig.type.TEXT : SocketMessageConfig.type.IMAGE
         }));
-    }
+    };
 
     // Update Data
     const updateData = ({room = null, user = null, messages = null}) => {
@@ -113,7 +113,7 @@ function useChatRoomSocket() {
     // Get Random Avatar
     const getRandomAvatar = () => {
         return "https://firebasestorage.googleapis.com/v0/b/bytethreads.appspot.com/o/avatars%2Favatar%20(" + (Math.random() * 38).toFixed(0) + ").png?alt=media"
-    }
+    };
 
     return {
         data,
