@@ -10,9 +10,9 @@ import BannerModal from "../../components/Modals/BannerModal.jsx";
 function Room() {
 
     const {roomId} = useParams();
-    const ChatSocket = useChatRoomSocket();
     const [children, setChildren] = useState(null);
     const [showModal, setShowModal] = useState(false);
+    const ChatSocket = useChatRoomSocket();
 
     useEffect(() => {
         setTimeout(() => {
@@ -42,11 +42,8 @@ function Room() {
                     setShowModal(false);
                     window.localStorage.setItem("chat-consent", Date.now().toString());
                 }}
-                onCancel={() => {
-                    setShowModal(false);
-                }}
+                onCancel={() => setShowModal(false)}
             />
-
             {children}
         </section>
     )
