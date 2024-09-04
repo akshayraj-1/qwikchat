@@ -16,21 +16,6 @@
       ]
     },
     {
-      "site": "temp-chat",
-      "public": "dist",
-      "ignore": [
-        "firebase.json",
-        "**/.*",
-        "**/node_modules/**"
-      ],
-      "rewrites": [
-        {
-          "source": "**",
-          "destination": "/index.html"
-        }
-      ]
-    },
-    {
       "site": "qwikchat",
       "public": "dist",
       "ignore": [
