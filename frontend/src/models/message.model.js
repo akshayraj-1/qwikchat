@@ -1,3 +1,5 @@
+// noinspection DuplicatedCode
+
 import SocketMessageConfig from "../../../backend/socket-message-config.json";
 class MessageModel {
     constructor({id, senderId, senderName, senderAvatar, content, type, severity, timestamp}) {
