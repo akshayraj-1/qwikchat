@@ -68,7 +68,7 @@ function Home() {
                             }
                         </h1>
                         <motion.div variants={variants.child}
-                                    className="flex justify-start sm:justify-center flex-wrap gap-5 mt-10">
+                                    className="flex justify-start md:justify-center flex-wrap gap-5 mt-10">
                             <Button label="Create Room"
                                     effect={{ click: { scale: 0.95 } }}
                                     onClick={handleCreateRoomClick}/>
