@@ -1,11 +1,11 @@
-import {v4 as uuidv4} from 'uuid';
 import SyntaxHighlighter from "react-syntax-highlighter";
+import PropTypes from "prop-types";
 
 import cn from "../../utils/cn.util.js";
-import {detectLanguage} from "../../utils/text.util.js";
+import {detectLanguage, getRandomKey} from "../../utils/text.util.js";
 import CustomSyntaxStyle from "../../values/custom-syntax-style.json";
 
-function TextView({message, onTextClick, className}) {
+function TextView({ message, onTextClick, className }) {
 
     const parts = message.split('```');
 
@@ -13,12 +13,12 @@ function TextView({message, onTextClick, className}) {
     const renderTextWithLinks = (text) => {
         return text.split(urlRegex).map((part, index) =>
             index % 2 === 0 ? (
-                <p key={uuidv4()} className="inline-block tracking-normal break-words hyphens-auto">
+                <p key={getRandomKey()} className="inline-block tracking-normal break-words hyphens-auto">
                     {part}
                 </p>
             ) : (
                 <a
-                    key={uuidv4()} href={part} target="_blank" rel="noopener noreferrer" style={{wordBreak: "break-all"}}
+                    key={getRandomKey()} href={part} target="_blank" rel="noopener noreferrer" style={{wordBreak: "break-all"}}
                     className="tracking-normal break-words text-accent cursor-pointer hover:underline">
                     {part}
                 </a>
@@ -30,7 +30,7 @@ function TextView({message, onTextClick, className}) {
     const formattedParts = parts.map((part, index) => {
         if (index % 2 === 1) {
             return (
-                <SyntaxHighlighter key={uuidv4()}
+                <SyntaxHighlighter key={getRandomKey()}
                                    language={detectLanguage(part)}
                                    style={CustomSyntaxStyle}
                                    lineProps={{style: {wordBreak: 'break-all', whiteSpace: 'pre-wrap'}}}
@@ -56,5 +56,11 @@ function TextView({message, onTextClick, className}) {
         </div>
     );
 }
+
+TextView.propTypes = {
+    message: PropTypes.string.isRequired,
+    onTextClick: PropTypes.func,
+    className: PropTypes.string
+};
 
 export default TextView;
