@@ -15,7 +15,7 @@ function useChatRoomSocket() {
 
         // Handle Connect
         socket.current.on(SocketConfig.events.CONNECT, () => {
-            console.log("Connected");
+            // console.log("Connected");
         });
 
         // Handle On Disconnect
