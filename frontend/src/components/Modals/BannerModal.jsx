@@ -2,6 +2,7 @@ import {AnimatePresence, motion} from "framer-motion";
 import cn from "../../utils/cn.util.js";
 import Button from "../UI/Button.jsx";
 import Backdrop from "./Backdrop.jsx";
+import PropTypes from "prop-types";
 
 const variants = {
     initial: {
@@ -18,7 +19,7 @@ const variants = {
     }
 }
 
-function BannerModal({showModal = false, title, message, position = "bottom", onConfirm, onCancel}) {
+function BannerModal({ showModal = false, title, message, position = "bottom", onConfirm, onCancel }) {
 
     return (
         <AnimatePresence mode="wait">
@@ -41,5 +42,14 @@ function BannerModal({showModal = false, title, message, position = "bottom", on
         </AnimatePresence>
     )
 }
+
+BannerModal.propTypes = {
+    showModal: PropTypes.bool,
+    title: PropTypes.string.isRequired,
+    message: PropTypes.string.isRequired,
+    position: PropTypes.oneOf(["top", "bottom"]),
+    onConfirm: PropTypes.func,
+    onCancel: PropTypes.func
+};
 
 export default BannerModal;
