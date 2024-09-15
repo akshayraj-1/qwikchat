@@ -1,5 +1,6 @@
 import cn from "../../utils/cn.util.js";
 import glow2 from "../../assets/images/glow2.png";
+import PropTypes from "prop-types";
 
 function MeshGradient({children, ...props}) {
     return (
@@ -15,5 +16,11 @@ function MeshGradient({children, ...props}) {
         </>
     )
 }
+
+MeshGradient.propTypes = {
+    children: PropTypes.node.isRequired,
+    opacity: PropTypes.number,
+    className: PropTypes.string
+};
 
 export default MeshGradient;
