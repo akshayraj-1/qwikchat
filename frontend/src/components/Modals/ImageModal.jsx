@@ -2,8 +2,9 @@ import {motion, AnimatePresence} from "framer-motion";
 import Backdrop from "./Backdrop.jsx";
 import {useEffect, useState} from "react";
 import cn from "../../utils/cn.util.js";
+import PropTypes from "prop-types";
 
-function ImageModal({show = false, image, onCancel}) {
+function ImageModal({ show = false, image, onCancel }) {
 
     const [zoomedIn, setZoomedIn] = useState(false);
 
@@ -60,5 +61,11 @@ function ImageModal({show = false, image, onCancel}) {
         </AnimatePresence>
     )
 }
+
+ImageModal.propTypes = {
+    show: PropTypes.bool,
+    image: PropTypes.string.isRequired,
+    onCancel: PropTypes.func
+};
 
 export default ImageModal;
