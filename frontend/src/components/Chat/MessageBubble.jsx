@@ -1,4 +1,5 @@
 import React, {useMemo} from "react";
+import PropTypes from "prop-types";
 import {motion} from "framer-motion";
 import cn from "../../utils/cn.util.js";
 import getEmoteIcon from "../../utils/emoteicon.util.js";
@@ -21,7 +22,7 @@ const variants = {
     }
 }
 
-function MessageBubble({user, messageModel, onImageClick, onTextClick}) {
+function MessageBubble({ user, messageModel, onImageClick, onTextClick }) {
 
     const {isSender, emoteIcon} = useMemo(
         () => ({
@@ -79,6 +80,13 @@ function MessageBubble({user, messageModel, onImageClick, onTextClick}) {
         </motion.div>
     );
 }
+
+MessageBubble.propTypes = {
+    user: PropTypes.object.isRequired,
+    messageModel: PropTypes.object.isRequired,
+    onImageClick: PropTypes.func,
+    onTextClick: PropTypes.func
+};
 
 export default React.memo(MessageBubble, (prevProps, nextProps) => {
     return prevProps.messageModel === nextProps.messageModel && prevProps.user.id === nextProps.user.id
