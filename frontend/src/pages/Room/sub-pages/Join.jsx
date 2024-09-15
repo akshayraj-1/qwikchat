@@ -1,4 +1,5 @@
 import {useRef, useState} from "react";
+import PropTypes from "prop-types";
 import {motion} from "framer-motion";
 import Button from "../../../components/UI/Button.jsx";
 import Loader from "../../../components/Loader.jsx";
@@ -100,6 +101,11 @@ function Join({ socket, roomId }) {
                 </motion.div>
             </div>
     )
+}
+
+Join.propTypes = {
+    socket: PropTypes.object.isRequired,
+    roomId: PropTypes.string.isRequired
 }
 
 export default Join;
