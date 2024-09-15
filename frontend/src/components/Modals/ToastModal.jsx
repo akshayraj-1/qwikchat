@@ -1,6 +1,7 @@
 import {AnimatePresence, motion} from "framer-motion";
-import cn from "../../utils/cn.util.js";
+import PropTypes from "prop-types";
 import { CircleAlert, CheckCheck } from "lucide-react";
+import cn from "../../utils/cn.util.js";
 
 const variants = {
     initial: {
@@ -25,7 +26,7 @@ const variants = {
     }
 }
 
-function ToastModal({showToast = false, message = "", type = "error", richColors = false}) {
+function ToastModal({ showToast = false, message = "", type = "error", richColors = false}) {
 
     const styles = {
         parent: cn("absolute z-[50] bottom-10 flex justify-center w-screen select-none"),
@@ -47,5 +48,12 @@ function ToastModal({showToast = false, message = "", type = "error", richColors
         </AnimatePresence>
     )
 }
+
+ToastModal.propTypes = {
+    showToast: PropTypes.bool,
+    message: PropTypes.string.isRequired,
+    type: PropTypes.oneOf(["error", "success"]),
+    richColors: PropTypes.bool
+};
 
 export default ToastModal;
