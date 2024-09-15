@@ -1,4 +1,5 @@
 import "./InfiniteGrids.scss";
+import PropTypes from "prop-types";
 import cn from "../../../utils/cn.util.js";
 
 function InfiniteGrids({children, ...props}) {
@@ -11,5 +12,11 @@ function InfiniteGrids({children, ...props}) {
         </>
     )
 }
+
+InfiniteGrids.propTypes = {
+    children: PropTypes.node.isRequired,
+    opacity: PropTypes.number,
+    className: PropTypes.string
+};
 
 export default InfiniteGrids;
