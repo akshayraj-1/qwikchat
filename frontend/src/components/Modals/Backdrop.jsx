@@ -1,4 +1,5 @@
 import {motion} from "framer-motion";
+import PropTypes from "prop-types";
 
 const variants = {
     initial: {
@@ -20,7 +21,7 @@ const variants = {
     }
 }
 
-function Backdrop({children, onClick}) {
+function Backdrop({ children, onClick }) {
     return (
         <motion.div key="modal-backdrop"
                     variants={variants} initial="initial"
@@ -30,5 +31,10 @@ function Backdrop({children, onClick}) {
         </motion.div>
     )
 }
+
+Backdrop.propTypes = {
+    children: PropTypes.node.isRequired,
+    onClick: PropTypes.func
+};
 
 export default Backdrop;
