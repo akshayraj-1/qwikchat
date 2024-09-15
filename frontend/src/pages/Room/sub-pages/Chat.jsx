@@ -1,4 +1,5 @@
 import React, {useCallback, useEffect, useRef, useState} from "react";
+import PropTypes from "prop-types";
 import {ArrowUpFromDot, Paperclip} from 'lucide-react';
 import MessageBubble from "../../../components/Chat/MessageBubble.jsx";
 import ImageModal from "../../../components/Modals/ImageModal.jsx";
@@ -154,4 +155,7 @@ function Chat({ socket }) {
     )
 }
 
+Chat.propTypes = {
+    socket: PropTypes.object.isRequired
+};
 export default Chat;
