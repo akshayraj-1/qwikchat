@@ -1,6 +1,7 @@
-import cn from "../../utils/cn.util.js";
 import {useState} from "react";
 import {motion} from "framer-motion";
+import PropTypes from "prop-types";
+import cn from "../../utils/cn.util.js";
 
 const variants = {
     initial: { opacity: 0 },
@@ -15,9 +16,11 @@ function ImageView({imageUrl, isEmote = false,  onClick = () => {}, className}) 
     const [loaded, setLoaded] = useState(false);
 
     const styles = cn(
-        isEmote ? "size-32 select-none animate-pulse bg-secondaryLight/50 rounded-full" : "h-80 w-auto p-1 object-contain cursor-pointer rounded-xl bg-secondaryVariant",
-        "overflow-hidden",
+        isEmote ?
+            "size-32 select-none animate-pulse bg-secondaryLight/50 rounded-full" :
+            "h-80 w-auto p-1 cursor-pointer rounded-xl bg-secondaryVariant",
         loaded ? isEmote && "bg-transparent rounded-none animate-none" : "",
+        "overflow-hidden",
         className
     );
 
@@ -27,7 +30,7 @@ function ImageView({imageUrl, isEmote = false,  onClick = () => {}, className}) 
                 variants={variants}
                 initial={"initial"}
                 animate={loaded && "animate"}
-                className={cn("size-full", !isEmote && "rounded-xl")}
+                className={cn("size-full", !isEmote && "rounded-xl object-cover")}
                 src={imageUrl}
                 draggable={false}
                 onLoad={() => setLoaded(true)}
@@ -36,5 +39,12 @@ function ImageView({imageUrl, isEmote = false,  onClick = () => {}, className}) 
         </div>
     );
 }
+
+ImageView.propTypes = {
+    imageUrl: PropTypes.string.isRequired,
+    isEmote: PropTypes.bool,
+    onClick: PropTypes.func,
+    className: PropTypes.string,
+};
 
 export default ImageView;
