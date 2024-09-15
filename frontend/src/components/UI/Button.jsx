@@ -1,8 +1,9 @@
 import { motion } from "framer-motion";
 import cn from "../../utils/cn.util.js";
+import PropTypes from "prop-types";
 
 // eslint-disable-next-line react/prop-types
-function Button({ type = "button", size = "sm", variant = "primary", effect = {hover: null, click: null}, disabled= false, label = "", onClick, className = "" }) {
+function Button({ type = "button", size = "sm", variant = "primary", effect = {hover: null, click: null}, disabled= false, label = "", onClick, className }) {
 
     const bgColor = variant === "primary"
                            ? "bg-textPrimary text-primary"
@@ -32,5 +33,19 @@ function Button({ type = "button", size = "sm", variant = "primary", effect = {h
         </Element>
     );
 }
+
+Button.propTypes = {
+    type: PropTypes.oneOf(["button", "anchor"]),
+    size: PropTypes.oneOf(["sm", "md"]),
+    variant: PropTypes.oneOf(["primary", "secondary"]),
+    effect: PropTypes.shape({
+        hover: PropTypes.object,
+        click: PropTypes.object,
+    }),
+    disabled: PropTypes.bool,
+    label: PropTypes.string,
+    onClick: PropTypes.func,
+    className: PropTypes.string,
+};
 
 export default Button;
