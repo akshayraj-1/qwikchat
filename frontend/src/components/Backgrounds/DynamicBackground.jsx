@@ -8,7 +8,7 @@ function DynamicBackground({ children, isBackgroundBlur = false, backgroundOpaci
         <div className="relative size-full overflow-hidden">
             <div
                 className="absolute size-full bg-cover bg-center bg-no-repeat
-                before:absolute before:size-full before:bg-gradient-to-t before:from-primary before:to-primary/20"
+                before:absolute before:size-full before:bg-gradient-to-t before:from-primary before:to-primary/10"
                 style={{
                     opacity: backgroundOpacity,
                     backgroundImage: `url(${_main_bg})`,
