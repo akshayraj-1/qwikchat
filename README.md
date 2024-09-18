@@ -1,7 +1,7 @@
 # QwikChat
 <br>
 <p align="center">
-<a href="https://imgcompressor-app.web.app" target="_blank">
+<a href="https://qwikchat.web.app" target="_blank">
 <img src="https://firebasestorage.googleapis.com/v0/b/bytethreads.appspot.com/o/public%2Freadme_banner.png?alt=media" width="100%">
 </a>
 <br>
