@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+
 import ImageData from "./src/values/images-data.json";
 
 export default {
@@ -22,7 +23,7 @@ export default {
         textSecondary: "#838C96",
       },
       backgroundImage: {
-        layerBlur1: `url(${ImageData.backdropBg})`
+        layerBlur1: `url(${ImageData.backdropBg})`,
       },
       fontFamily: {
         mona: "Mona-Sans, sans-serif",

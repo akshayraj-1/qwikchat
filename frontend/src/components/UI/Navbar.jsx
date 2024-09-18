@@ -1,6 +1,6 @@
 import {Link} from "react-router-dom";
 import cn from "../../utils/cn.util.js";
-import qwikchat_logo from "../../assets/images/qwikchat_logo.svg";
+import qwikchat_logo from "../../assets/images/logo.svg";
 
 function Navbar(props) {
     return (
