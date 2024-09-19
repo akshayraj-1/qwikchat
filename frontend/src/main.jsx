@@ -4,7 +4,7 @@ import { Route, RouterProvider, createBrowserRouter, createRoutesFromElements } 
 import App from "./App.jsx";
 
 import Home from "./pages/Home.jsx";
-import Room from "./pages/Room/Room.jsx";
+import Room from "./pages/Room.jsx";
 
 
 const router = createBrowserRouter(
