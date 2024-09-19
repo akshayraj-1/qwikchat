@@ -21,7 +21,7 @@ function ImageModal({ show = false, image, onCancel }) {
 
         if (show) {
             window.addEventListener("keydown", handleKeyDown);
-            window.history.pushState({}, "");
+            window.history.pushState({ modalOpen: true }, "");
             window.addEventListener("popstate", handlePopState);
         }
 
@@ -31,9 +31,9 @@ function ImageModal({ show = false, image, onCancel }) {
 
         return () => {
             window.removeEventListener("keydown", handleKeyDown);
+            window.removeEventListener("popstate", handlePopState);
             if (show) {
-                window.history.back();
-                window.removeEventListener("popstate", handlePopState);
+                window.history.replaceState({}, "");
             }
         };
     }, [show, onCancel]);
