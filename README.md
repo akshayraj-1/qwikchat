@@ -1,20 +1,12 @@
+![Banner](https://firebasestorage.googleapis.com/v0/b/bytethreads.appspot.com/o/public%2Freadme_banner.png?alt=media)
+
 # QwikChat
-<br>
-<p align="center">
-<a href="https://qwikchat.web.app" target="_blank">
-<img src="https://firebasestorage.googleapis.com/v0/b/bytethreads.appspot.com/o/public%2Freadme_banner.png?alt=media" width="100%">
-</a>
-<br>
-<p align="center">
-<i>
+
 A real-time chat application that allows users to create ephemeral chat rooms without the need for accounts. Supports animated emote-icons, code snippets highlighting, and sending images as well.
-</i>
-</p>
-<p align="center">
+
 <a href="https://qwikchat.web.app" target="_blank">
 <img alt="Live" src="https://img.shields.io/badge/View%20Live-blue?style=flat"/>
 </a>
-</p>
 
 ## Features
 
@@ -25,7 +17,7 @@ A real-time chat application that allows users to create ephemeral chat rooms wi
 - **Code Snippets Highlighting**: Share and view code snippets with syntax highlighting.
 - **ImageView Sharing**: Send images directly in the chat.
 
-## Stack
+## Technology Stack
 
 - **Frontend**: React
 - **Backend**: Node.js with Socket.IO for real-time communication
