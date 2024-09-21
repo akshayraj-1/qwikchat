@@ -41,12 +41,13 @@ function useCustomToast() {
 
 
     useEffect(() => {
+        let timer = null;
         if (toastVisible) {
-            let timer = setTimeout(() => {
+            timer = setTimeout(() => {
                 setToastVisible(false);
             }, 2500);
-            return () => clearTimeout(timer);
         }
+        return () => clearTimeout(timer);
     }, [toastVisible]);
 
     const showToast = (message, type = "error") => {
@@ -60,9 +61,11 @@ function useCustomToast() {
             <AnimatePresence mode="wait">
                 {
                     toastVisible &&
-                    <div className={styles.parent} >
-                        <motion.div className={styles.body} variants={variants} initial="initial" animate="final" exit="exit">
-                            {toastType === "error" ? <CircleAlert size={13} className={styles.message} /> : <CheckCheck size={13} className={styles.message} />}
+                    <div className={styles.parent}>
+                        <motion.div className={styles.body} variants={variants} initial="initial" animate="final"
+                                    exit="exit">
+                            {toastType === "error" ? <CircleAlert size={13} className={styles.message}/> :
+                                <CheckCheck size={13} className={styles.message}/>}
                             <p className={styles.message}>{toastMessage}</p>
                         </motion.div>
                     </div>
@@ -76,7 +79,7 @@ function useCustomToast() {
         type: PropTypes.oneOf(["error", "success"]),
     };
 
-    return { CustomToastModal, showToast };
+    return {CustomToastModal, showToast};
 
 }
 
