@@ -1,6 +1,6 @@
-![Banner](https://firebasestorage.googleapis.com/v0/b/bytethreads.appspot.com/o/public%2Freadme_banner.png?alt=media)
-
 # QwikChat
+
+![Banner](https://firebasestorage.googleapis.com/v0/b/bytethreads.appspot.com/o/public%2Freadme_banner.png?alt=media)
 
 A real-time chat application that allows users to create ephemeral chat rooms without the need for accounts. Supports animated emote-icons, code snippets highlighting, and sending images as well.
 
