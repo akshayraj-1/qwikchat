@@ -20,7 +20,7 @@ export default {
         success: "#79ff92",
         textPrimary: "#e6edf3",
         textPrimaryLight: "#dadada",
-        textSecondary: "#858e99",
+        textSecondary: "#838c96",
       },
       backgroundImage: {
         layerBlur1: `url(${ImageData.backdropBg})`,
