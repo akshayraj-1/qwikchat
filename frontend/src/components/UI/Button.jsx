@@ -7,7 +7,9 @@ function Button({ type = "button", size = "sm", variant = "primary", effect = {h
 
     const bgColor = variant === "primary"
                            ? "bg-textPrimary text-primary"
-                           : "border border-secondaryLight bg-secondaryVariant text-textPrimary";
+                           : variant === "secondary"
+                           ? "border border-secondaryLight bg-secondaryVariant text-textPrimary"
+                           : "border border-textPrimary text-textPrimary hover:bg-textPrimary hover:text-secondaryVariant transition duration-300";
     const textSizeClass = size === "md" ? "text-base" : "text-sm";
     const styles = cn(`
         ${textSizeClass}
@@ -38,7 +40,7 @@ function Button({ type = "button", size = "sm", variant = "primary", effect = {h
 Button.propTypes = {
     type: PropTypes.oneOf(["button", "anchor"]),
     size: PropTypes.oneOf(["sm", "md"]),
-    variant: PropTypes.oneOf(["primary", "secondary"]),
+    variant: PropTypes.oneOf(["primary", "secondary", "tertiary"]),
     effect: PropTypes.shape({
         hover: PropTypes.object,
         click: PropTypes.object,
