@@ -1,25 +1,25 @@
 import PropTypes from "prop-types";
 import cn from "../../utils/cn.util.js";
-import glow2 from "../../assets/images/_glow2.png";
-import _main_bg from "../../assets/images/_main_bg.webp";
+import img_glow from "../../assets/images/img_glow.png";
+import img_main_bg from "../../assets/images/img_main_bg.webp";
 
 function DynamicBackground({ children, isBackgroundBlur = false, backgroundOpacity = 1, glowOpacity = 1, className }) {
     return (
         <div className="relative size-full overflow-hidden">
             <div
                 className="absolute size-full bg-cover bg-center bg-no-repeat
-                before:absolute before:size-full before:bg-gradient-to-t before:from-primary before:to-primary/10"
+                before:absolute before:size-full before:bg-gradient-to-t before:from-primary before:to-transparent"
                 style={{
                     opacity: backgroundOpacity,
-                    backgroundImage: `url(${_main_bg})`,
+                    backgroundImage: `url(${img_main_bg})`,
                     filter: isBackgroundBlur ? "blur(25px)" : ""
                 }}
             />
             <div
-                className="absolute -bottom-14 left-0 right-0 mx-auto h-[75vh] w-full bg-cover bg-bottom bg-no-repeat blur-3xl"
+                className="absolute -bottom-16 left-0 right-0 mx-auto h-[70vh] w-full bg-cover bg-bottom bg-no-repeat blur-3xl"
                 style={{
                     opacity: glowOpacity,
-                    backgroundImage: `url(${glow2})`
+                    backgroundImage: `url(${img_glow})`
                 }}
             />
             <div className={cn("relative z-[2]", className)}>

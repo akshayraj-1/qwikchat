@@ -64,7 +64,7 @@ function Home() {
                 >
                     {/* Headline Section */}
                     <div
-                        className="text-[38px] sm:text-[34px] md:text-[4.45vw] font-bold tracking-normal overflow-hidden flex flex-wrap justify-center items-center gap-x-2.5 w-full">
+                        className="text-[30px] sm:text-[34px] md:text-[4.45vw] font-bold tracking-normal overflow-hidden flex flex-wrap justify-center items-center gap-x-2.5 w-full">
                         {["Connect.", "Chat.", "Disconnect."].map((label, idx) => (
                             <motion.h1
                                 key={idx}

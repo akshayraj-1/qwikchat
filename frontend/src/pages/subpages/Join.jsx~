@@ -45,7 +45,7 @@ function Join({ socket, roomId }) {
     const handleInputChange = (e) => {
         setUser(prev => ({
             ...prev,
-            name: e.target.value.toString().toLowerCase(),
+            name: e.target.value.toString(),
         }));
     }
 
@@ -86,11 +86,11 @@ function Join({ socket, roomId }) {
                     <label htmlFor="username" className="text-textSecondary text-start w-full inline-block mt-3.5">Username</label>
                     <input ref={usernameRef}
                            id="username"
-                           className="w-full px-3 py-2 mt-1.5 mb-3 text-base sm:text-sm rounded-md border border-secondaryLight bg-secondaryVariant outline-0"
+                           className="lowercase w-full px-3 py-2 mt-1.5 mb-3 text-base sm:text-sm rounded-md border border-secondaryLight bg-secondaryVariant outline-0"
                            type="text" placeholder="john"
                            required={true}
                            onInput={handleInputChange}
-                           value={(user && user.name.toLowerCase()) || ""}
+                           value={(user && user.name) || ""}
                            onKeyDown={(e) => e.key.toString().toLowerCase() === "enter" && handleJoinRoomClick()}/>
 
                     <Button className="w-full my-3.5 py-[0.55rem]"
