@@ -12,7 +12,7 @@ const variants = {
         transition: {
             duration: 1.3,
             ease: "anticipate",
-            staggerChildren: 0.15,
+            staggerChildren: 0.2,
         },
     },
     exit: {
@@ -21,7 +21,7 @@ const variants = {
         transition: {
             duration: 1.3,
             ease: "anticipate",
-            staggerChildren: 0.15,
+            staggerChildren: 0.2,
         }
     },
 }

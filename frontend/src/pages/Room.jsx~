@@ -34,7 +34,7 @@ function Room() {
     }, [roomId, ChatSocket.data.user]);
 
     return (
-        <DynamicBackground className="relative size-full" glowOpacity={0.2} isBackgroundBlur={true}>
+        <DynamicBackground className="relative size-full" glowOpacity={0.1} isBackgroundBlur={true}>
             <BannerModal
                 showModal={showModal}
                 title="Hey there!"

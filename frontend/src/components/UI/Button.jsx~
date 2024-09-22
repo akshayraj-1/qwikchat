@@ -6,7 +6,7 @@ import PropTypes from "prop-types";
 function Button({ type = "button", size = "sm", variant = "primary", effect = {hover: null, click: null}, disabled= false, label = "", onClick, className }) {
 
     const bgColor = variant === "primary"
-                           ? "bg-textPrimary text-primary"
+                           ? "bg-textPrimary"
                            : "border border-secondaryLight bg-secondaryVariant text-textPrimary";
     const textSizeClass = size === "md" ? "text-base" : "text-sm";
     const styles = cn(`
