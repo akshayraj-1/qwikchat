@@ -65,14 +65,10 @@ function Home() {
                     {/* Headline Section */}
                     <div
                         className="font-bold tracking-normal overflow-hidden flex flex-wrap justify-center items-center gap-x-2.5 w-full"
-                        style={{fontSize: "clamp(38px, 4.5vw, 80px)"}}
+                        style={{fontSize: "clamp(min(10vw, 37px), 4.4vw, 80px)"}}
                     >
                         {["Connect.", "Chat.", "Disconnect."].map((label, idx) => (
-                            <motion.h1
-                                key={idx}
-                                variants={variants.child}
-                                className="inline-block"
-                            >
+                            <motion.h1 key={idx} variants={variants.child} className="inline-block">
                                 {label}
                             </motion.h1>
                         ))}
@@ -83,7 +79,7 @@ function Home() {
                         variants={variants.child}
                         initial="initial"
                         animate="final"
-                        className="text-sm sm:text-[0.95rem] leading-relaxed text-center text-pretty text-textPrimary/80 max-w-[420px] sm:max-w-[75vw] md:max-w-[57vw]"
+                        className="hidden sm:block text-[0.95rem] leading-relaxed text-center text-pretty text-textPrimary/80 max-w-[65vw] md:max-w-[57vw]"
                     >
                         Connect instantly and chat freely, with no sign-ups or accounts. Designed for seamless
                         conversations when you need them most.
