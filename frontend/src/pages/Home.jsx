@@ -53,18 +53,20 @@ function Home() {
             className="relative h-full w-full"
         >
             <MainBackground
-                className="flex flex-col justify-center items-center size-full px-5 sm:px-9"
+                className="flex flex-col justify-center items-center size-full"
                 glowOpacity={0.8}
             >
                 <motion.main
                     variants={variants.child}
                     initial="initial"
                     animate="final"
-                    className="flex flex-col size-full justify-center items-center gap-1.5"
+                    className="flex flex-col size-full justify-center items-center gap-1.5 px-5 sm:px-9"
                 >
                     {/* Headline Section */}
                     <div
-                        className="text-[38px] sm:text-[34px] md:text-[4.45vw] font-bold tracking-normal overflow-hidden flex flex-wrap justify-center items-center gap-x-2.5 w-full">
+                        className="font-bold tracking-normal overflow-hidden flex flex-wrap justify-center items-center gap-x-2.5 w-full"
+                        style={{fontSize: "clamp(38px, 4.5vw, 80px)"}}
+                    >
                         {["Connect.", "Chat.", "Disconnect."].map((label, idx) => (
                             <motion.h1
                                 key={idx}
