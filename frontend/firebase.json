@@ -1,21 +1,6 @@
 {
   "hosting": [
     {
-      "site": "bytethreads",
-      "public": "dist",
-      "ignore": [
-        "firebase.json",
-        "**/.*",
-        "**/node_modules/**"
-      ],
-      "rewrites": [
-        {
-          "source": "**",
-          "destination": "https://qwikchat.web.app/"
-        }
-      ]
-    },
-    {
       "site": "qwikchat",
       "public": "dist",
       "ignore": [
