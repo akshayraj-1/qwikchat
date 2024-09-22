@@ -5,7 +5,7 @@ import useChatRoomSocket from "../hooks/useChatRoomSocket.js";
 import Join from "./subpages/Join.jsx";
 import Chat from "./subpages/Chat.jsx";
 import BannerModal from "../components/Modals/BannerModal.jsx";
-import DynamicBackground from "../components/Backgrounds/DynamicBackground.jsx";
+import MainBackground from "../components/Backgrounds/MainBackground.jsx";
 
 
 function Room() {
@@ -34,7 +34,7 @@ function Room() {
     }, [roomId, ChatSocket.data.user]);
 
     return (
-        <DynamicBackground className="relative size-full" glowOpacity={0.2} isBackgroundBlur={true}>
+        <MainBackground className="relative size-full" glowOpacity={0.2} isBackgroundBlur={true}>
             <BannerModal
                 showModal={showModal}
                 title="Hey there!"
@@ -46,7 +46,7 @@ function Room() {
                 onCancel={() => setShowModal(false)}
             />
             {children}
-        </DynamicBackground>
+        </MainBackground>
     )
 }
 
