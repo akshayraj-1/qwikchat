@@ -4,7 +4,7 @@ import {generate} from "random-words";
 
 import Footer from "../components/UI/Footer.jsx";
 import Button from "../components/UI/Button.jsx";
-import DynamicBackground from "../components/Backgrounds/DynamicBackground.jsx";
+import MainBackground from "../components/Backgrounds/MainBackground.jsx";
 
 const variants = {
     parent: {
@@ -52,7 +52,7 @@ function Home() {
             animate="final"
             className="relative h-full w-full"
         >
-            <DynamicBackground
+            <MainBackground
                 className="flex flex-col justify-center items-center size-full px-5 sm:px-9"
                 glowOpacity={0.8}
             >
@@ -102,7 +102,7 @@ function Home() {
                 </motion.main>
 
                 <Footer/>
-            </DynamicBackground>
+            </MainBackground>
         </motion.div>
 
     );
