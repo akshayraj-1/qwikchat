@@ -142,7 +142,7 @@ function Chat({ socket }) {
                         }}
                     />
                     <div
-                        className={cn("bg-secondaryLight p-2 rounded-full flex items-center justify-center self-end", inputMessage?.length > 0 ? "cursor-pointer text-secondaryVariant bg-textPrimary transition-all duration-100" : "text-textSecondary cursor-default")}
+                        className={cn("bg-secondaryLight p-2 rounded-full flex items-center justify-center self-end", inputMessage?.length > 0 ? "cursor-pointer text-primaryText bg-gradient-to-br from-accent to-accentDark transition-all duration-100" : "text-textSecondary cursor-default")}
                         onClick={(e) => {
                             e.stopPropagation();
                             e.preventDefault();
