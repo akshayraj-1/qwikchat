@@ -15,9 +15,9 @@ const variants = {
         y: 0,
         opacity: 1,
         transition: {
-            duration: 1.2,
+            duration: 1,
             ease: "anticipate",
-            staggerChildren: 0.12,
+            staggerChildren: 0.11,
         },
     }
 }
@@ -33,7 +33,7 @@ function Home() {
 
     return (
         <MainBackground className="flex flex-col justify-center items-center size-full" glowOpacity={0.8}>
-            <motion.main variants={variants} initial="initial" animate="final"
+            <motion.main variants={variants} initial="initial" animate="final" viewport={{ once: true }}
                 className="flex flex-col size-full justify-center items-center gap-1.5 px-5 sm:px-9" >
 
                 {/* Headline Section */}
@@ -50,7 +50,7 @@ function Home() {
 
                 {/* Description Section */}
                 <motion.p variants={variants}
-                    className="hidden sm:block text-[0.95rem] leading-relaxed text-center text-pretty text-textPrimary/80 max-w-[65vw] md:max-w-[57vw]" >
+                    className="hidden sm:block text-[0.95rem] leading-relaxed text-center text-pretty text-textPrimary/75 max-w-[65vw] md:max-w-[57vw]" >
                     Connect instantly and chat freely, with no sign-ups or accounts. Designed for seamless
                     conversations when you need them most.
                 </motion.p>
