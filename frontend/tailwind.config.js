@@ -15,6 +15,7 @@ export default {
         secondaryLight: "#30363D",
         secondaryVariant: "#161B22",
         accent: "#9c98fa",
+        accentLight: "#bab8ff",
         accentDark: "#5952c6",
         error: "#ff708c",
         success: "#79ff92",
