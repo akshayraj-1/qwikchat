@@ -6,7 +6,7 @@ import PropTypes from "prop-types";
 function Button({ type = "button", size = "sm", variant = "primary", effect = {hover: null, click: null}, disabled= false, label = "", onClick, className }) {
 
     const bgColor = variant === "primary"
-                           ? "bg-textPrimary text-primary"
+                           ? "bg-gradient-to-br from-accent to-accentDark text-textPrimary border-t-[2.5px] border-accentLight"
                            : variant === "secondary"
                            ? "border border-secondaryLight bg-secondaryVariant text-textPrimary"
                            : "border border-textPrimary text-textPrimary hover:bg-textPrimary hover:text-secondaryVariant transition duration-300";
@@ -17,7 +17,7 @@ function Button({ type = "button", size = "sm", variant = "primary", effect = {h
         font-normal
         rounded-md
         tracking-wide
-        px-7 py-[0.65rem]
+        px-7 py-[0.5rem]
         ${className}
     `);
 
