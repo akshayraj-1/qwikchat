@@ -1,0 +1,43 @@
+$bg-url: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAACRSURBVHgB7dExCsJAEEDRWXsLY+HhbAQX4qHMEY0QRRthzN7ib/gPhmnnM2UcbzlN9xiGY/Rqnh9R1p37wyneryV6db2co6yfyOfyiZ7l7xu72AhDaAyhMYTGEBpDaAyhMYTGEBpDaAyhMYTGEBpDaAyhMYTGEBpDaAyhMYTGEBpDaAyh2UxIk7XWbLvXaff/AUCdR7tFiNQqAAAAAElFTkSuQmCC";
+$bg-width: 50px;
+$bg-height: 50px;
+
+@-webkit-keyframes bg-scrolling-reverse {
+  100% { background-position: $bg-width $bg-height; }
+}
+@-moz-keyframes    bg-scrolling-reverse {
+  100% { background-position: $bg-width $bg-height; }
+}
+@-o-keyframes      bg-scrolling-reverse {
+  100% { background-position: $bg-width $bg-height; }
+}
+@keyframes         bg-scrolling-reverse {
+  100% { background-position: $bg-width $bg-height; }
+}
+
+@-webkit-keyframes bg-scrolling {
+  0% { background-position: $bg-width $bg-height; }
+}
+@-moz-keyframes    bg-scrolling {
+  0% { background-position: $bg-width $bg-height; }
+}
+@-o-keyframes      bg-scrolling {
+  0% { background-position: $bg-width $bg-height; }
+}
+@keyframes         bg-scrolling {
+  0% { background-position: $bg-width $bg-height; }
+}
+
+#infinite-grids {
+  background: url($bg-url) repeat 0 0;
+
+  -webkit-animation: bg-scrolling-reverse 3.5s infinite; /* Safari 4+ */
+  -moz-animation:    bg-scrolling-reverse 3.5s infinite; /* Fx 5+ */
+  -o-animation:      bg-scrolling-reverse 3.5s infinite; /* Opera 12+ */
+  animation:         bg-scrolling-reverse 3.5s infinite; /* IE 10+ */
+  -webkit-animation-timing-function: linear;
+  -moz-animation-timing-function:    linear;
+  -o-animation-timing-function:      linear;
+  animation-timing-function:         linear;
+
+}
