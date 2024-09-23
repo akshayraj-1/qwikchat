@@ -93,7 +93,7 @@ function Join({ socket, roomId }) {
                            value={(user && user.name.toLowerCase()) || ""}
                            onKeyDown={(e) => e.key.toString().toLowerCase() === "enter" && handleJoinRoomClick()}/>
 
-                    <Button className="w-full my-3.5 py-[0.5rem]"
+                    <Button className="w-full my-3.5"
                             label="Join"
                             effect={{ click: { scale: 0.95 } }}
                             onClick={handleJoinRoomClick}/>
