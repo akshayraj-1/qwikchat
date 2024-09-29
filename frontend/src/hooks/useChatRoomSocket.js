@@ -1,5 +1,5 @@
 import {io} from "socket.io-client";
-import {useMemo, useRef, useState} from "react";
+import {useEffect, useMemo, useRef, useState} from "react";
 import SocketConfig from "../../../backend/socket-config.json";
 import SocketMessageConfig from "../../../backend/socket-message-config.json";
 import RoomModel from "../models/room.model.js";
@@ -39,6 +39,13 @@ function useChatRoomSocket() {
             });
         });
 
+    }, []);
+
+    // Disconnect the socket on unmount
+    useEffect(() => {
+        return () => {
+            socket.current.disconnect();
+        };
     }, []);
 
     // Join Room
