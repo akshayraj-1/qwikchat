@@ -1,5 +1,5 @@
 import {io} from "socket.io-client";
-import {useEffect, useRef, useState} from "react";
+import {useMemo, useRef, useState} from "react";
 import SocketConfig from "../../../backend/socket-config.json";
 import SocketMessageConfig from "../../../backend/socket-message-config.json";
 import RoomModel from "../models/room.model.js";
@@ -11,14 +11,12 @@ function useChatRoomSocket() {
     const socket = useRef(io(import.meta.env.VITE_SERVER_URL));
     const [data, setData] = useState({user: null, room: null, messages: []});
 
-    useEffect(() => {
+    useMemo(() => {
 
         // Handle Connect
-        socket.current.on(SocketConfig.events.CONNECT, () => {
-            // console.log("Connected");
-        });
+        socket.current.on(SocketConfig.events.CONNECT, () => {});
 
-        // Handle On Disconnect
+        // Handle On Disconnect (Someone left the room)
         socket.current.on(SocketConfig.events.ON_DISCONNECT, () => {
             updateData({
                 user: new UserModel({ connected: false }),
@@ -41,11 +39,7 @@ function useChatRoomSocket() {
             });
         });
 
-        return () => {
-            socket.current.disconnect();
-        };
-
-    }, [socket.current]);
+    }, []);
 
     // Join Room
     const joinRoom = (roomId, name, avatar, callback) => {
