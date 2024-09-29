@@ -29,6 +29,13 @@ export default {
       fontFamily: {
         mona: "Mona-Sans, sans-serif",
         poppins: "Poppins, sans-serif"
+      },
+      maxWidth: {
+        custom: "min(67vw, 570px)",
+        custom2: "min(60vw, 610px)"
+      },
+      screens: {
+        sm: "481px"
       }
     },
   },
