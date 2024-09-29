@@ -37,26 +37,23 @@ function Home() {
                 className="flex flex-col size-full justify-center items-center gap-1.5 px-5 sm:px-9" >
 
                 {/* Headline Section */}
-                <div className="font-bold tracking-normal overflow-hidden flex flex-wrap justify-center items-center gap-x-2.5 w-full"
-                     style={{fontSize: "clamp(min(10vw, 37px), 4.4vw, 80px)"}} >
-
+                <div className="font-semibold tracking-normal overflow-hidden flex flex-wrap justify-start sm:justify-center items-center gap-x-3 w-full
+                text-[37px] sm:text-[5.7vw] md:text-[4.5vw]">
                     {["Connect.", "Chat.", "Disconnect."].map((label, idx) => (
                         <motion.h1 key={idx} variants={variants} className="inline-block">
                             {label}
                         </motion.h1>
                     ))}
-
                 </div>
 
                 {/* Description Section */}
                 <motion.p variants={variants}
-                    className="hidden sm:block text-[0.95rem] leading-relaxed text-center text-pretty text-textPrimary/75 max-w-[65vw] md:max-w-[57vw]" >
-                    Connect instantly and chat freely, with no sign-ups or accounts. Designed for seamless
-                    conversations when you need them most.
+                    className="text-sm sm:text-[0.95rem] font-thin text-start sm:text-center text-pretty text-[#d8d8d8]/80 leading-relaxed w-full sm:max-w-custom md:max-w-custom2" >
+                    Connect instantly and chat freely, with no sign-ups. Enjoy seamless conversations whenever you want.
                 </motion.p>
 
                 {/* Button Section */}
-                <motion.div variants={variants} className="mt-12" >
+                <motion.div variants={variants} className="flex mt-10 justify-start w-full sm:justify-center" >
                     <Button
                         label="Create Room"
                         effect={{click: {scale: 0.95}, hover: {}}}
