@@ -1,7 +1,7 @@
 {
     "name":  "qwikchat",
     "private":  true,
-    "version":  "2.8.7",
+    "version":  "2.8.8",
     "type":  "module",
     "scripts":  {
                     "dev":  "vite",
@@ -23,7 +23,8 @@
                          "react-router-dom":  "^6.22.1",
                          "react-syntax-highlighter":  "^15.5.0",
                          "socket.io-client":  "^4.7.5",
-                         "tailwind-merge":  "^2.2.1"
+                         "tailwind-merge":  "^2.2.1",
+                         "vite-plugin-pages-sitemap":  "^1.0.1"
                      },
     "devDependencies":  {
                             "@types/node":  "^20.11.30",
@@ -38,6 +39,7 @@
                             "postcss":  "^8.4.35",
                             "sass":  "^1.71.1",
                             "tailwindcss":  "^3.4.1",
-                            "vite":  "^5.1.4"
+                            "vite":  "^5.1.4",
+                            "vite-plugin-sitemap":  "^0.7.1"
                         }
 }
