@@ -30,7 +30,7 @@ function BannerModal({ showModal = false, title, message, position = "bottom", o
                                 initial="initial"
                                 animate="final"
                                 onClick={(e) => e.stopPropagation()}
-                                className={cn("absolute flex flex-wrap justify-center gap-5 px-9 py-9 w-full bg-primary border-t border-secondaryLight", position === "bottom" ? "bottom-0" : "top-0")}>
+                                className={cn("absolute flex flex-wrap justify-center gap-5 px-9 py-9 w-full bg-background border-t border-surfaceLight", position === "bottom" ? "bottom-0" : "top-0")}>
                         <div className="md:max-w-[70%] w-full">
                             <h2 className="text-xl font-medium">{title}</h2>
                             <p className="text-textSecondary text-sm font-thin mt-3">{message}</p>
