@@ -85,7 +85,7 @@ const emojiMap = new Map([
     }],
     ["😂", {
         description: "Face with Tears of Joy",
-        url: "https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Face%20with%20TearsOf Joy.png"
+        url: "https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/refs/heads/master/Emojis/Smilies/Face%20with%20Tears%20of%20Joy.png"
     }],
     ["😛", {
         description: "Face with Tongue",
