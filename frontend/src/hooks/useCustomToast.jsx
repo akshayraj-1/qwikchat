@@ -35,7 +35,7 @@ function useCustomToast() {
 
     const styles = {
         parent: cn("absolute z-[50] bottom-5 sm:bottom-10 flex justify-center w-screen select-none px-5"),
-        body: cn("relative flex gap-2 items-center bg-secondary w-fit py-3 px-5 rounded-lg border border-secondaryLight/50 shadow-xl"),
+        body: cn("relative flex gap-2 items-center bg-surface w-fit py-3 px-5 rounded-lg border border-surfaceLight/50 shadow-xl"),
         message: cn("sm:text-[0.75rem] text-sm", toastType === "error" ? "text-error" : "text-success")
     }
 
