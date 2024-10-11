@@ -10,13 +10,13 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: "#010409",
-        secondary: "#0D1117",
-        secondaryLight: "#30363D",
-        secondaryVariant: "#161B22",
-        accent: "#9c98fa",
-        accentLight: "#bab8ff",
-        accentDark: "#5952c6",
+        primary: "#9c98fa",
+        primaryDark: "#5952c6",
+        primaryLight: "#bab8ff",
+        background: "#010409",
+        surface: "#0D1117",
+        surfaceLight: "#30363D",
+        surfaceVariant: "#161B22",
         error: "#ff708c",
         success: "#79ff92",
         textPrimary: "#e6edf3",
