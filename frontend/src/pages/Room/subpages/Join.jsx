@@ -64,11 +64,11 @@ function Join({ socket, roomId }) {
 
                 {/*input box*/}
                 <motion.div variants={variants} initial="initial" animate="final"
-                            className="relative flex flex-col items-center justify-center shadow-2xl px-7 py-5 min-w-80 bg-secondary border border-secondaryLight rounded-2xl text-sm
-                            before:absolute before:-top-14 before:size-32 before:bg-secondary before:border-t before:border-r before:-rotate-45 before:border-secondaryLight before:rounded-full">
+                            className="relative flex flex-col items-center justify-center shadow-2xl px-7 py-5 min-w-80 bg-surface border border-surfaceLight rounded-2xl text-sm
+                            before:absolute before:-top-14 before:size-32 before:bg-surface before:border-t before:border-r before:-rotate-45 before:border-surfaceLight before:rounded-full">
 
                     {
-                        !avatarLoaded && <div className="absolute z-[2] -top-[2.8rem] size-[6.8rem] p-3 bg-secondaryLight/20 rounded-full animate-pulse" ></div>
+                        !avatarLoaded && <div className="absolute z-[2] -top-[2.8rem] size-[6.8rem] p-3 bg-surfaceLight/20 rounded-full animate-pulse" ></div>
                     }
                     <motion.img className="absolute z-[2] -top-14 size-32 p-3" initial={{opacity: 0}}
                                 animate={avatarLoaded && {opacity: 1, transition: {duration: 0.5, ease: "easeIn"}}}
@@ -78,7 +78,7 @@ function Join({ socket, roomId }) {
 
                     <label htmlFor="roomId" className="text-textSecondary text-start w-full inline-block mt-14">Room Id</label>
                     <input id="roomId"
-                           className="w-full px-3 py-2 mt-1.5 text-base sm:text-sm rounded-md border border-secondaryLight bg-secondaryVariant outline-0"
+                           className="w-full px-3 py-2 mt-1.5 text-base sm:text-sm rounded-md border border-surfaceLight bg-surfaceVariant outline-0"
                            type="text"
                            disabled={true}
                            value={roomId}/>
@@ -86,7 +86,7 @@ function Join({ socket, roomId }) {
                     <label htmlFor="username" className="text-textSecondary text-start w-full inline-block mt-3.5">Username</label>
                     <input ref={usernameRef}
                            id="username"
-                           className="w-full px-3 py-2 mt-1.5 mb-3 text-base sm:text-sm rounded-md border border-secondaryLight bg-secondaryVariant outline-0"
+                           className="w-full px-3 py-2 mt-1.5 mb-3 text-base sm:text-sm rounded-md border border-surfaceLight bg-surfaceVariant outline-0"
                            type="text" placeholder="john"
                            required={true}
                            onInput={handleInputChange}
