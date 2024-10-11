@@ -6,10 +6,10 @@ import PropTypes from "prop-types";
 function Button({ type = "button", size = "sm", variant = "primary", effect = {hover: null, click: null}, disabled= false, label = "", onClick, className }) {
 
     const bgColor = variant === "primary"
-                           ? "bg-gradient-to-br from-accent to-accentDark text-textPrimary border-t-[2.5px] border-accentLight"
+                           ? "bg-gradient-to-br from-primary to-primaryDark text-textPrimary border-t-[2.5px] border-primaryLight"
                            : variant === "secondary"
-                           ? "border border-secondaryLight bg-secondaryVariant text-textPrimary"
-                           : "border border-textPrimary text-textPrimary hover:bg-textPrimary hover:text-secondaryVariant transition duration-300";
+                           ? "border border-surfaceLight bg-surfaceVariant text-textPrimary"
+                           : "border border-textPrimary text-textPrimary hover:bg-textPrimary hover:text-surfaceVariant transition duration-300";
     const textSizeClass = size === "md" ? "text-base" : "text-sm";
     const styles = cn(`
         ${textSizeClass}
