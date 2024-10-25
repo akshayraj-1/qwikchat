@@ -15,6 +15,19 @@ export default defineConfig({
   envDir: "./",
   envFiles: [".env.development"],
   build: {
+    minify: "terser",
+    terserOptions: {
+      compress: {
+        drop_console: true,
+      }
+    },
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          vendor: ['react', 'react-dom']
+        }
+      }
+    },
     envDir: "./",
     envFile: ".env.production",
     chunkSizeWarningLimit: 2000
