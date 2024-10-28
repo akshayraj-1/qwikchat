@@ -94,7 +94,7 @@ function Chat({ socket }) {
                 <ImageModal show={selectedImage && true} image={selectedImage} onCancel={() => setSelectedImage(null)}/>
             }
             <div
-                className="relative z-40 flex flex-col h-full w-full md:max-w-[50%] min-w-80 md:px-0 px-5 pt-16 mx-auto">
+                className="relative z-40 flex flex-col h-full w-full md:max-w-[70%] lg:max-w-[50%] min-w-80 md:px-0 px-5 pt-16 mx-auto">
                 <div ref={chatsRef}
                      className="flex flex-col flex-1 h-full w-full overflow-y-scroll">
                     {
