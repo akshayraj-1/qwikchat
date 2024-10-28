@@ -19,7 +19,12 @@ app.use(cors());
 const server = http.createServer(app);
 const io = new Server(server, {
     maxHttpBufferSize: SocketConfig.maxBufferSize,
-    cors: { origin: process.env.User_URL || "*" }
+    cors: { origin: process.env.User_URL || "*" },
+    perMessageDeflate: {
+        threshold: 1024,
+        zlibDeflateOptions: { level: 6 },
+        zlibInflateOptions: { chunkSize: 16 * 1024 }
+    }
 });
 
 // Socket Events Handling
