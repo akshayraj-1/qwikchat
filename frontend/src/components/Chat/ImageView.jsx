@@ -17,8 +17,8 @@ function ImageView({imageUrl, isEmote = false,  onClick = () => {}, className}) 
 
     const styles = cn(
         isEmote ?
-            "size-32 select-none animate-pulse bg-surfaceLight/50 rounded-full" :
-            "h-80 w-auto p-1 cursor-pointer rounded-xl bg-surfaceVariant",
+            "size-32 select-none animate-pulse bg-colorSurfaceLight/50 rounded-full" :
+            "h-80 w-auto p-1 cursor-pointer rounded-xl bg-colorSurfaceVariant",
         loaded ? isEmote && "bg-transparent rounded-none animate-none" : "",
         "overflow-hidden",
         className
