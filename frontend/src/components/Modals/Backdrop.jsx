@@ -26,7 +26,7 @@ function Backdrop({ children, onClick }) {
         <motion.div key="modal-backdrop"
                     variants={variants} initial="initial"
                     animate="final" exit="exit" onClick={onClick}
-                    className="absolute top-0 left-0 z-50 flex items-center justify-center h-full w-full bg-background/60">
+                    className="absolute top-0 left-0 z-50 flex items-center justify-center h-full w-full bg-colorBackground/60">
             {children}
         </motion.div>
     )
