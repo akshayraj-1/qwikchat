@@ -113,7 +113,7 @@ function Chat({ socket }) {
                     }
                 </div>
                 <div
-                    className="flex items-center gap-3 w-full mb-4 mt-2 p-2 text-sm rounded-xl border border-surfaceLight bg-surfaceVariant">
+                    className="flex items-center gap-3 w-full mb-4 mt-2 p-2 text-sm rounded-xl border border-colorSurfaceLight bg-colorSurfaceVariant">
 
                     <input ref={pickerRef} hidden={true} type="file"
                            accept={"image/png, image/jpg, image/jpeg, image/gif"} onChange={sendImageMessage}/>
@@ -142,7 +142,7 @@ function Chat({ socket }) {
                         }}
                     />
                     <div
-                        className={cn("bg-surfaceLight p-2 rounded-full flex items-center justify-center self-end", inputMessage?.length > 0 ? "cursor-pointer text-primaryText bg-gradient-to-br from-primary to-primaryDark transition-all duration-100" : "text-textSecondary cursor-default")}
+                        className={cn("bg-colorSurfaceLight p-2 rounded-full flex items-center justify-center self-end", inputMessage?.length > 0 ? "cursor-pointer text-primaryText bg-gradient-to-br from-colorPrimary to-colorPrimaryDark transition-all duration-100" : "text-textSecondary cursor-default")}
                         onClick={(e) => {
                             e.stopPropagation();
                             e.preventDefault();
