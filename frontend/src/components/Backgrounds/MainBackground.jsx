@@ -8,7 +8,7 @@ function MainBackground({ children, isBackgroundBlur = false, backgroundOpacity 
         <section className="relative size-full overflow-hidden">
             <div
                 className="absolute size-full bg-cover bg-center bg-no-repeat
-                before:absolute before:size-full before:bg-gradient-to-t before:from-background before:to-transparent"
+                before:absolute before:size-full before:bg-gradient-to-t before:from-colorBackground before:to-transparent"
                 style={{
                     opacity: backgroundOpacity,
                     backgroundImage: `url(${img_main_bg})`,
