@@ -1,11 +1,21 @@
 /** @type {import('tailwindcss').Config} */
 
 import ImageData from "./src/values/images-data.json";
+import plugin from "tailwindcss/plugin.js";
 
 export default {
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
+  ],
+  plugins: [
+    plugin(({ addUtilities }) => {
+      addUtilities({
+        ".field-sizing-content": {
+          "field-sizing": "content",
+        },
+      });
+    }),
   ],
   theme: {
     extend: {
@@ -38,7 +48,6 @@ export default {
         sm: "481px"
       }
     },
-  },
-  plugins: [],
+  }
 }
 
