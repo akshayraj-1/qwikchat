@@ -50,14 +50,6 @@ function Chat({ socket }) {
         }
     }, []);
 
-    // Handle
-    useEffect(() => {
-        if (inputRef.current) {
-            inputRef.current.style.height = 'auto';
-            inputRef.current.style.height = `${inputRef.current.scrollHeight}px`;
-        }
-    }, [inputMessage]);
-
     const sendTextMessage = () => {
         if (inputRef === null || inputRef.current === null) return;
         if (inputMessage.trim().length > 0) {
@@ -128,7 +120,7 @@ function Chat({ socket }) {
                     <textarea
                         ref={inputRef}
                         rows={1}
-                        className="text-base sm:text-sm w-full bg-transparent outline-none whitespace-pre-wrap resize-none overflow-auto max-h-[130px]"
+                        className="text-base sm:text-sm field-sizing-content w-full bg-transparent outline-none whitespace-pre-wrap resize-none overflow-auto max-h-[130px]"
                         placeholder="Write your message"
                         value={inputMessage}
                         onChange={(e) => {
