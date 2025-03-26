@@ -6,4 +6,4 @@ class RoomModel {
     }
 }
 
-export default RoomModel;
+module.exports = RoomModel;

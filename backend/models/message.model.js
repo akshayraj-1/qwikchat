@@ -1,4 +1,4 @@
-import SocketMessageConfig from "../socket-message-config.json" assert { type: "json" };
+const SocketMessageConfig = require("../socket-message-config");
 
 class MessageModel {
     constructor({id, senderId, senderName, senderAvatar, content, type, severity, timestamp}) {
@@ -13,4 +13,4 @@ class MessageModel {
     }
 }
 
-export default MessageModel;
+module.exports = MessageModel;

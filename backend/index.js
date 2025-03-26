@@ -1,13 +1,13 @@
-import express from "express";
-import http from "http";
-import cors from "cors";
-import { Server } from "socket.io";
-import SocketConfig from "./socket-config.json" assert { type: "json" };
-import SocketMessageConfig from "./socket-message-config.json" assert { type: "json" };
-import ResponseModel from "./models/response.model.js";
-import MessageModel from "./models/message.model.js";
-import UserModel from "./models/user.model.js";
-import RoomModel from "./models/room.model.js";
+const express = require('express');
+const http = require('http');
+const cors = require('cors');
+const { Server } = require('socket.io');
+const SocketConfig = require('./socket-config.json');
+const SocketMessageConfig = require('./socket-message-config.json');
+const ResponseModel = require('./models/response.model.js');
+const MessageModel = require('./models/message.model.js');
+const UserModel = require('./models/user.model.js');
+const RoomModel = require('./models/room.model.js');
 
 
 const PORT = process.env.PORT || 3005;
