@@ -45,6 +45,7 @@ Follow these steps to set up and run the project locally.
 ```
 
 **_Follow the below steps for both frontend and backend:_**
+<br/>
 2. **Install dependencies:**
 
 ```bash
